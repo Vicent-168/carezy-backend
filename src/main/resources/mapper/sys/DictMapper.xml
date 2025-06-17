@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shdata.health.carezy.common.dict.DictMapper">
+
+    <select id="findDictByType" resultType="com.shdata.health.common.dict.Dict">
+        SELECT t.ZDDM code, t.ZDMC name FROM T_HL_DIC_GENERAL t
+        WHERE t.del_flag = '0' and t.ZDLX = #{type}
+        ORDER BY t.XH
+    </select>
+    <select id="getDiseaseName" resultType="java.lang.String">
+        SELECT ZDMC FROM T_HL_DIC_JBZD
+        WHERE ID = #{code}
+    </select>
+    <select id="findByTypeAndCj" resultType="com.shdata.health.common.dict.Dict">
+        SELECT t.ZDDM code, t.ZDMC name FROM T_HL_DIC_GENERAL t
+        WHERE t.del_flag = '0' and t.ZDLX = #{type} and t.CJ = #{cj}
+        ORDER BY t.XH
+    </select>
+    <select id="findByTypeAndSjdm" resultType="com.shdata.health.common.dict.Dict">
+        SELECT t.ZDDM code, t.ZDMC name FROM T_HL_DIC_GENERAL t
+        WHERE t.del_flag = '0' and t.ZDLX = #{type} and t.SJDM = #{sjdm}
+        ORDER BY t.XH
+    </select>
+    <select id="getFormName" resultType="java.lang.String">
+        SELECT MC FROM T_HL_DIC_HLJLWS
+        WHERE ID = #{code}
+    </select>
+    <select id="getDiseaseDict" resultType="com.shdata.health.common.dict.Dict">
+        SELECT ID code, ZDMC name FROM T_HL_DIC_JBZD where del_flag = '0'
+    </select>
+    <select id="getFormDict" resultType="com.shdata.health.common.dict.Dict">
+        SELECT ID code, MC name FROM T_HL_DIC_HLJLWS where del_flag = '0'
+    </select>
+    <select id="findDict" resultType="com.shdata.health.carezy.common.dict.DictVo">
+        SELECT t.ZDDM code, t.ZDMC name, t.CJ, t.SJDM FROM T_HL_DIC_GENERAL t
+        WHERE t.del_flag = '0' and t.ZDLX = #{type}
+        ORDER BY t.XH
+    </select>
+    <select id="test">
+        SELECT d.MKXMID,d.XMZ,d.XMZ1,d.XMZ2,d.XMZ3 FROM T_HL_DP_BQYY_DPSJ d
+        JOIN (
+        SELECT t.MKXMID,MAX(t.UPDATE_TIME) AS mtime FROM T_HL_DP_BQYY_DPSJ t
+        JOIN T_HL_DP_BQYY_MKXMB mx ON t.MKXMID =mx.ID AND mx.DEL_FLAG ='0'
+        JOIN T_HL_DP_BQYY_MKB b ON mx.MKID=b.ID AND b.DEL_FLAG ='0'
+        WHERE t.DEL_FLAG ='0' AND t.XMZ IS NOT NULL AND b.MKLX IN
+        <foreach collection="mklxs" item="mklx" open="(" separator="," close=")">#{mklx}</foreach>
+        AND d.YLJGID=#{yljgid} AND d.BQID=#{wardId}
+        GROUP BY t.MKXMID
+        ) t ON d.MKXMID = t.MKXMID AND d.UPDATE_TIME = t.mtime WHERE d.DEL_FLAG='0'
+
+    </select>
+
+</mapper>

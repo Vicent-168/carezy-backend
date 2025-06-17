@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shdata.health.carezy.forms.mapper.FormsDetailMapper">
+
+    <insert id="insertDetails">
+        INSERT INTO T_HL_YW_HLJLMX (ID, BLWSID, XMDM, XMMC, XMZSM, XMZ, FZ, BZ)
+        VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.id}, #{item.blwsid}, #{item.xmdm}, #{item.xmmc}, #{item.xmzsm}, #{item.xmz}, #{item.fz}, #{item.bz})
+        </foreach>
+    </insert>
+
+    <update id="updateDetail">
+        UPDATE T_HL_YW_HLJLMX
+        SET XMDM = #{xmdm}, XMMC = #{xmmc},XMZSM = #{xmzsm}, XMZ = #{xmz}, FZ = #{fz}, BZ = #{bz}
+        WHERE ID = #{id}
+    </update>
+    <delete id="deleteDetail">
+        DELETE FROM T_HL_YW_HLJLMX where BLWSID = #{blwsid}
+    </delete>
+
+    <select id="getDetail" resultType="com.shdata.health.carezy.forms.vo.FormsDetailVo">
+        SELECT * FROM T_HL_YW_HLJLMX t WHERE
+        <if test="blwsid!='' and blwsid!=null">  t.BLWSID = #{blwsid} </if>
+    </select>
+    <select id="getDetailByBatch" parameterType="list" resultType="com.shdata.health.carezy.forms.vo.FormsDetailVo">
+        SELECT * FROM T_HL_YW_HLJLMX
+        WHERE BLWSID IN
+        <foreach item="id" index="index" collection="list" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+        ORDER BY  ID DESC
+    </select>
+
+</mapper>

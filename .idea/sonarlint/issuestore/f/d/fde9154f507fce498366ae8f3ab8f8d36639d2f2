@@ -1,0 +1,136 @@
+
+”	java:S117Ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”´î¨8¿ò ô²2J$7d361640-3247-45b7-a69a-291e079cd60f
+™	java:S117Ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ÑØãÿÿÿÿÿ8Àò ô²2J$1e76ba8c-c55f-42e9-8192-33be695e1cb9
+“	java:S117õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(å³êz8Àò ô²2J$2950fc8d-28e4-436d-83f6-0e6669ff53af
+™	java:S117ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ˆô­Áþÿÿÿÿ8Àò ô²2J$953a13ff-f760-44e4-a2d9-b2a185dd27a6
+
+java:S4973K"<Strings and Boxed types should be compared using "equals()".(ô¼ú÷8áìÑî²2J$514c9a06-69a3-404b-bdd4-2bb907d876b6
+
+java:S4973z"<Strings and Boxed types should be compared using "equals()".(ô¼ú÷8âìÑî²2J$051574aa-8457-4be3-8055-95a00960e23f
+€
+java:S4973«"<Strings and Boxed types should be compared using "equals()".(ô¼ú÷8Ï†Ôî²2J$b459d06e-f9a0-42cf-b8c3-9006da0fc184
+€
+java:S4973™"<Strings and Boxed types should be compared using "equals()".(ô¼ú÷8Áò ô²2J$876deba3-eade-442f-90fe-25f2aad80f3e
+€
+java:S4973Ï"<Strings and Boxed types should be compared using "equals()".(ô¼ú÷8Áò ô²2J$9f1a7e25-71c8-45d8-969e-741a6c6098a2
+€
+java:S4973ø"<Strings and Boxed types should be compared using "equals()".(ô¼ú÷8Áò ô²2J$23057adb-c83f-40e4-8cf6-5dbf46e4d5f1
+©
+java:S1488-"aImmediately return this expression instead of assigning it to the temporary variable "indexList".(÷”©úÿÿÿÿ8Ãò ô²2J$279d7512-23ee-466d-b190-127280eb31db
+Š
+java:S1226Å"AIntroduce a new variable instead of reusing the parameter "wsfl".(î×’½ýÿÿÿÿ8Äò ô²2J$5000fca3-7360-4302-aebd-1101f8997320
+	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(ðäÐþÿÿÿÿ8åìÑî²2J$f2ce761f-71ad-42d5-90c6-2c2a9dd08305
+ˆ	java:S112ü"FDefine and throw a dedicated exception instead of using a generic one.(³â¿8Èò ô²2J$cbd03c08-2916-4082-ae84-9808a93db85c
+‹
+java:S1192E"HDefine a constant instead of duplicating this literal ":\"\"$1" 8 times.(µëÚÐ8Éò ô²2J$1d4e9d60-a041-48b6-adf2-75d29d51e747
+•
+java:S1192D"MDefine a constant instead of duplicating this literal "([a-zA-Z]+):" 8 times.(èüÒÁúÿÿÿÿ8Éò ô²2J$1217e3f6-ad81-473a-a257-44fda41666fb
+‘
+java:S1192Ú"HDefine a constant instead of duplicating this literal "XM_CLSJ" 4 times.(þÆ“øùÿÿÿÿ8Éò ô²2J$9924a7a7-e1f5-4dca-b125-cba2c4ac9336
+Œ
+java:S1192Ý"HDefine a constant instead of duplicating this literal "XM_SJJD" 4 times.(Óá£8Éò ô²2J$41e034aa-48aa-4192-90c5-5c0f13e0a91d
+
+java:S1192E"JDefine a constant instead of duplicating this literal ":([,\\}])" 8 times.(µëÚÐ8Éò ô²2J$6dd009a4-d203-416d-b6ef-8847bdf39194
+
+java:S1192D"HDefine a constant instead of duplicating this literal "\"$1\":" 8 times.(èüÒÁúÿÿÿÿ8Éò ô²2J$ec6a504b-22a3-4de1-9b0a-fe1db2e3643e
+š
+java:S37763"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ðäÐþÿÿÿÿ8Òò ô²2J$15bbb02d-be17-4e80-9584-e20cfb7a1114
+´
+java:S11303"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ðäÐþÿÿÿÿ8‰íÑî²2J$2b7ed793-6cde-4b3c-bb95-4f5b7a630fa9
+•
+java:S3776X"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ºÅÐ•8Ùò ô²2J$94c5422b-e236-4394-8394-c827a862d469
+
+java:S1854]"7Remove this useless assignment to local variable "ids".(™“Žúÿÿÿÿ8ýìÑî²2J$803166be-fd01-42b6-9106-7396f8945cff
+½
+java:S6204a"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(œçÖß8þìÑî²2J$adf6b5a3-ab89-438b-970d-f974c4b8a2fa
+›
+java:S1602_"SRemove useless curly braces around statement and then remove useless return keyword(Ã©“ïúÿÿÿÿ8þìÑî²2J$91ba4f18-1377-47f5-87c2-180044172ab4
+ˆ
+java:S1612_"@Replace this lambda with method reference 'FormsIndexVo::getId'.(Ã©“ïúÿÿÿÿ8þìÑî²2J$5f4a9788-fcbc-4496-a0bc-af2b0742f072
+Â
+java:S6204l"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(îÁ¼Îùÿÿÿÿ8þìÑî²2J$3595c619-410b-4c4b-a9b6-a7ac50a26f85
+›
+java:S3776‰"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(„§öÏøÿÿÿÿ8Þò ô²2J$fd6f76d4-27f0-4210-ae1d-fdb6be8653dd
+€
+java:S1854Ž"7Remove this useless assignment to local variable "ids".(™“Žúÿÿÿÿ8‰íÑî²2J$38ce3ec1-371e-4d11-be04-958f9b63b67f
+¾
+java:S6204’"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(œçÖß8‰íÑî²2J$120d50ce-5c09-4449-bb73-bb608fb2c0f1
+œ
+java:S1602"SRemove useless curly braces around statement and then remove useless return keyword(Ã©“ïúÿÿÿÿ8‰íÑî²2J$a36a4d52-9889-4c36-a05f-adfa5ac781d9
+‰
+java:S1612"@Replace this lambda with method reference 'FormsIndexVo::getId'.(Ã©“ïúÿÿÿÿ8‰íÑî²2J$9fca7e3d-6098-4e85-b307-357a0fbc77ee
+Ã
+java:S6204"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(îÁ¼Îùÿÿÿÿ8‰íÑî²2J$a9d6ff57-1de8-4d16-af73-7ec242e81ff7
+–
+java:S3776Â"RRefactor this method to reduce its Cognitive Complexity from 95 to the 15 allowed.(æ¸±¡8ãò ô²2J$235b407b-c915-42f2-af32-10c11305095a
+Ã
+java:S6204Ê"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(¢Æû“úÿÿÿÿ8‰íÑî²2J$4071c527-c036-4233-beff-6eb438c0c720
+Ã
+java:S6204Ë"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(Óóéìúÿÿÿÿ8’íÑî²2J$0a442dba-4d9b-406a-bbac-22c5b8a52180
+Ã
+java:S6204Ð"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(”®òÿÿÿÿÿ8ó†Ôî²2J$eb3487f1-7bc0-4801-8e32-9dcd9e99f80b
+œ
+java:S1602Ð"SRemove useless curly braces around statement and then remove useless return keyword(”®òÿÿÿÿÿ8ó†Ôî²2J$bd0d506d-2a37-4c28-bd63-84aca63e1d95
+‰
+java:S1612Ð"@Replace this lambda with method reference 'FormsIndexVo::getId'.(”®òÿÿÿÿÿ8ó†Ôî²2J$4be66903-6fb8-4dbf-8813-6bd7bee4b21b
+¾
+java:S6204ô"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(ÐÊ÷õ8ó†Ôî²2J$4751173c-3ba5-4b76-8c75-4c3f1d035a4b
+—
+java:S1602ô"SRemove useless curly braces around statement and then remove useless return keyword(ÐÊ÷õ8ïò ô²2J$863a1bb4-4844-4499-9e68-bd3e82bd8195
+„
+java:S1612ô"@Replace this lambda with method reference 'FormsIndexVo::getId'.(ÐÊ÷õ8ïò ô²2J$3ad4e6de-cb60-4532-b88d-6f142116361b
+	java:S125›"<This block of commented-out lines of code should be removed.(×ÿ¯ø8õò ô²2J$65d52e61-e941-4a07-9af0-80755d54f621
+€
+java:S1854¿"7Remove this useless assignment to local variable "ids".(™“Žúÿÿÿÿ8ó†Ôî²2J$1f3fa1c4-1325-4bae-8ffd-01a3f1ec6b34
+o
+java:S1172¶"+Remove this unused method parameter "wsfl".(Îö’ü8ëžªÑ²2J$ca9ae27c-deb9-4f83-aa6d-1289f3f454d6
+¾
+java:S6204½"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(¯‰‹þ8÷ò ô²2J$aefc11d6-fb53-4b68-8a4d-1059d624e27d
+¾
+java:S6204Ã"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(œçÖß8÷ò ô²2J$884ef620-595e-4a61-9b7d-97343ac114c2
+œ
+java:S1602Á"SRemove useless curly braces around statement and then remove useless return keyword(Ã©“ïúÿÿÿÿ8øò ô²2J$adba30b5-5dd0-406a-9477-d958d9edbb76
+‰
+java:S1612Á"@Replace this lambda with method reference 'FormsIndexVo::getId'.(Ã©“ïúÿÿÿÿ8øò ô²2J$ddb41c97-f3a6-4656-bb1e-7879329e826c
+’
+java:S3252ì"OUse static access with "cn.hutool.core.text.CharSequenceUtil" for "isNotBlank".(‰í„F8…íÑî²2J$e8de96b7-6ffb-4e56-966e-60f419ce9b57
+•
+java:S3776ü"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(³â¿8‰íÑî²2J$1ad4af98-744b-4955-a541-e504bb84d8d7
+¯
+java:S1130ü"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(³â¿8üò ô²2J$eaa22e4f-c7b7-442e-b2a0-e03cad28ec5b
+Ã
+java:S6204‹"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(îÁ¼Îùÿÿÿÿ8ýò ô²2J$4e47395b-56e0-4c47-abe2-c8576aaeb6df
+›
+java:S3776¬"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(Ïå¾€ýÿÿÿÿ8‰íÑî²2J$39d4c46b-a6c0-47eb-995d-0585e2b7379a
+€
+java:S1854²"7Remove this useless assignment to local variable "ids".(™“Žúÿÿÿÿ8‚ó ô²2J$33514938-4942-42ba-8031-59a784708ac3
+¾
+java:S6204¶"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(œçÖß8ƒó ô²2J$24ecc950-374c-45e2-b475-904c1cdd81ff
+œ
+java:S1602´"SRemove useless curly braces around statement and then remove useless return keyword(Ã©“ïúÿÿÿÿ8ƒó ô²2J$760a26dc-0f07-48e8-a671-bd5b8b82d5cc
+‰
+java:S1612´"@Replace this lambda with method reference 'FormsIndexVo::getId'.(Ã©“ïúÿÿÿÿ8ƒó ô²2J$02cd2109-bf88-4a40-8ace-f4c07a410bb0
+Ã
+java:S6204Á"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(îÁ¼Îùÿÿÿÿ8ƒó ô²2J$d214acbc-282e-40cc-b16a-a0d6a9df04a4
+›
+java:S3776ä"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(‹®·¼øÿÿÿÿ8ŽíÑî²2J$88674c70-cd89-493e-8da0-0a12d5bcfb4d
+›
+java:S3776¢"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(¼¡¦ÿúÿÿÿÿ8‘íÑî²2J$f5023e1b-6671-4f90-9058-592687deedab
+Ã
+java:S6204¬"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(™™§Ãýÿÿÿÿ8‹ó ô²2J$692772b5-c7db-4b68-8a49-7a319217368a
+•
+java:S3776Ö"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(·øþX8ó†Ôî²2J$f973d1cd-7cf9-42cd-a611-bab4e231b7e9
+€
+java:S1854Û"7Remove this useless assignment to local variable "ids".(™“Žúÿÿÿÿ8Žó ô²2J$b0ca93a3-8ced-48a1-bb6a-6ea440d3f3c6
+¾
+java:S6204ß"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(œçÖß8ó ô²2J$43a472ea-a8af-4f15-a76d-5ba94aee2492
+œ
+java:S1602Ý"SRemove useless curly braces around statement and then remove useless return keyword(Ã©“ïúÿÿÿÿ8ó ô²2J$a026fab7-1038-4e6d-9923-985b08b1ff2b
+‰
+java:S1612Ý"@Replace this lambda with method reference 'FormsIndexVo::getId'.(Ã©“ïúÿÿÿÿ8ó ô²2J$2b3f16ae-9a5b-47bb-9b1c-3879d5799258
+Ã
+java:S6204ê"zReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.(îÁ¼Îùÿÿÿÿ8ó ô²2J$7304a1e6-438c-4100-a10a-504b1095dcf9
+N
+java:S1128"1Remove this unused import 'java.math.BigDecimal'.(êêŠ8åŒù÷²2
+Š
+java:S6541Â"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 93 to 64, Complexity from 26 to 14, Nesting Level from 5 to 2, Number of Variables from 26 to 6.(æ¸±¡8˜ó ô²2J$f97a07d1-8626-4c50-b203-dd9bf02a7fdc

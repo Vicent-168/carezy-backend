@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shdata.health.carezy.patientmanage.mapper.RegistInformationMapper">
+
+
+    <select id="findByPage0" resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationListWithNoneConertVo"
+            parameterType="com.shdata.health.carezy.patientmanage.vo.RegistInformationSearchVo">
+        SELECT
+        t.*,d.zddm,d.zdmc,
+        (SELECT COUNT(CASE WHEN r.rwzt = '2' THEN 1 END) FROM T_HL_YW_ZYHLRWB r WHERE r.BRID = t.id) AS rws
+        FROM
+        V_HL_HZLB t
+        left join T_HL_DIC_JBZD d on t.ZDID = d.id
+        WHERE
+        t.rycyzt = '1'
+
+        <if test="patientStatus!=null and patientStatus!=''">
+            AND t.HZSXLX like concat('%',#{patientStatus},'%')
+        </if>
+
+
+        <choose>
+            <when test="wards!=null and wards!=''">
+                AND t.bqid=#{wards}
+            </when>
+            <otherwise>
+                AND t.bqid IN
+                <foreach collection="bqList" item="item" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </otherwise>
+        </choose>
+
+        and t.yljgid=#{yljgid}
+
+    </select>
+
+    <select id="findByPage1" resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationListWithNoneConertVo">
+        SELECT
+        t.*,d.zddm,d.zdmc,
+        (SELECT COUNT(CASE WHEN r.rwzt = '2' THEN 1 END) FROM T_HL_YW_ZYHLRWB r WHERE r.BRID = t.id) AS rws
+        FROM
+        V_HL_HZLB t
+        left join T_HL_DIC_JBZD d on t.ZDID = d.id
+        WHERE
+        t.rycyzt != '1'
+
+        <if test="patientStatus!=null and patientStatus!=''">
+            AND t.HZSXLX like concat('%',#{patientStatus},'%')
+        </if>
+
+
+        <choose>
+            <when test="wards!=null and wards!=''">
+                AND t.bqid=#{wards}
+            </when>
+            <otherwise>
+                AND t.bqid IN
+                <foreach collection="bqList" item="item" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </otherwise>
+        </choose>
+
+            <if test="startDate!=null and startDate!=''">
+                AND t.cysj &gt;= #{startDate}
+            </if>
+            <if test="endDate!=null and endDate!=''">
+                AND t.cysj &lt;= #{endDate}
+            </if>
+            <if test="search!=null and search!=''">
+                AND (t.xm LIKE CONCAT('%',#{search},'%') OR t.bch LIKE CONCAT('%',#{search},'%') OR t.zyh LIKE
+                CONCAT('%',#{search},'%'))
+            </if>
+    </select>
+
+
+    <select id="getInfoByBrid" resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationVo">
+        select t.*,d.zddm,d.zdmc
+        from T_HL_YW_BRDJXX t  left join T_HL_DIC_JBZD d on t.ZDID = d.id
+        where t.id = #{brid}
+          and t.del_flag = '0'
+    </select>
+    <select id="batchRetrievePatientVitalSigns"
+            resultType="com.shdata.health.carezy.patientmanage.vo.PatientVitalSignInfoVo"
+            parameterType="com.shdata.health.carezy.patientmanage.vo.VitalSignSearchFiltersVo">
+        SELECT
+        t1.ID as id,
+        t1.BCH as bch,
+        t1.XM as xm,
+        t1.NL as nl,
+        t1.SFZH as sfzh,
+        t1.XB as xb,
+        t1.ZYH as zyh,
+        t1.RYSJ as rysj,
+        t1.CYSJ as cysj,
+        t1.YSID as ysid
+        FROM T_HL_YW_BRDJXX t1
+        WHERE t1.del_flag='0' and t1.RYCYZT = '1'
+        <if test="yljgid!=null and yljgid!=''">
+            AND t1.YLJGID=#{yljgid}
+        </if>
+        <if test="hzzt != null and hzzt != ''">
+            AND (
+            t1.HZZT LIKE CONCAT('%,', #{hzzt}, ',%')
+            OR t1.HZZT LIKE CONCAT(#{hzzt}, ',%')
+            OR t1.HZZT LIKE CONCAT('%,', #{hzzt})
+            OR t1.HZZT = #{hzzt}
+            )
+        </if>
+        <if test="bqid!=null and bqid!=''">
+            and t.BQID=#{bqid}
+        </if>
+        <if test="hsid!=null and hsid!=''">
+            AND t1.HSID=#{hsid}
+        </if>
+    </select>
+
+    <select id="batchBloodGlucoseQuery"
+            resultType="com.shdata.health.carezy.patientmanage.vo.PatientBloodGlucoseDataVo"
+            parameterType="com.shdata.health.carezy.patientmanage.vo.PatientBloodGlucoseBatchQueryParamsVo">
+        SELECT
+        t1.ID as id,
+        t1.BCH as bch,
+        t1.XM as xm,
+        t1.NL as nl,
+        t1.SFZH as sfzh,
+        t1.XB as xb,
+        t1.ZYH as zyh,
+        t1.RYSJ as rysj,
+        t1.CYSJ as cysj,
+        t1.YSID as ysid
+        FROM T_HL_YW_BRDJXX t1
+        WHERE t1.del_flag='0'
+        and t1.RYCYZT = '1'
+        <if test="hzzt != null and hzzt != ''">
+            AND (
+            t1.HZZT LIKE CONCAT('%,', #{hzzt}, ',%')
+            OR t1.HZZT LIKE CONCAT(#{hzzt}, ',%')
+            OR t1.HZZT LIKE CONCAT('%,', #{hzzt})
+            OR t1.HZZT = #{hzzt}
+            )
+        </if>
+        <if test="bqid!=null and bqid!=''">
+            AND t1.BQID=#{bqid}
+        </if>
+        <if test="hsid!=null and hsid!=''">
+            AND t1.HSID=#{hsid}
+        </if>
+        <if test="yljgid!=null and yljgid!=''">
+            AND t1.YLJGID=#{yljgid}
+        </if>
+    </select>
+
+    <select id="CareNotificationList" resultType="com.shdata.health.carezy.patientmanage.vo.NursingNoticeVo"
+            parameterType="com.shdata.health.carezy.patientmanage.vo.NursingNoticeSearchVo">
+        SELECT
+        t1.ID as id,
+        t1.BCH as bch,
+        t1.XM as xm,
+        t1.NL as nl,
+        t1.SFZH as sfzh,
+        t1.XB as xb,
+        t1.ZYH as zyh,
+        t1.RYSJ as rysj,
+        t1.CYSJ as cysj,
+        t1.YSID as ysid,
+        CASE
+        WHEN t1.BCH LIKE '+%' THEN 0 -- 加床号标记为 0
+        ELSE 1 -- 常规号标记为 1
+        END AS is_extra_bed,
+        CASE
+        WHEN t1.BCH LIKE '+%' THEN TO_NUMBER(SUBSTR(t1.BCH, 2)) -- 提取加床号的数值部分
+        ELSE TO_NUMBER(t1.BCH) -- 常规号直接转换为数值
+        END AS bed_number
+        FROM
+        T_HL_YW_BRDJXX t1
+        WHERE
+        t1.RYCYZT = '1'
+        AND t1.DEL_FLAG = '0'
+        <if test="yljgid != null and yljgid != ''">
+            AND t1.YLJGID = #{yljgid}
+        </if>
+        <!--<if test="hsid != null and hsid != ''">
+            AND t1.HSID = #{hsid}
+        </if>-->
+        <!-- 仅当 hzzt 不为空时，添加模糊匹配条件 -->
+        <if test="hzzt != null and hzzt != ''">
+            AND (
+            t1.HZZT LIKE CONCAT('%,', #{hzzt}, ',%')
+            OR t1.HZZT LIKE CONCAT(#{hzzt}, ',%')
+            OR t1.HZZT LIKE CONCAT('%,', #{hzzt})
+            OR t1.HZZT = #{hzzt}
+            )
+        </if>
+        <choose>
+            <when test="bqid!=null and bqid!=''">
+                AND t1.BQID=#{bqid}
+            </when>
+            <otherwise>
+                AND t1.BQID IN
+                <foreach collection="bqList" item="item" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </otherwise>
+        </choose>
+        ORDER BY is_extra_bed ASC, bed_number ASC
+    </select>
+
+    <select id="findInvasiveTreatmentList"
+            resultType="com.shdata.health.carezy.patientmanage.vo.InvasiveTreatmentVo"
+            parameterType="com.shdata.health.carezy.patientmanage.vo.InvasiveTreatmentSearchVo">
+        SELECT
+        t1.ID as id,
+        t1.BCH as bch,
+        t1.XM as xm,
+        t1.NL as nl,
+        t1.SFZH as sfzh,
+        t1.XB as xb,
+        t1.ZYH as zyh,
+        t1.RYSJ as rysj,
+        t1.CYSJ as cysj,
+        t1.YSID as ysid,
+        CASE
+        WHEN t1.BCH LIKE '+%' THEN 0 -- 加床号标记为 0
+        ELSE 1 -- 常规号标记为 1
+        END AS is_extra_bed,
+        CASE
+        WHEN t1.BCH LIKE '+%' THEN TO_NUMBER(SUBSTR(t1.BCH, 2)) -- 提取加床号的数值部分
+        ELSE TO_NUMBER(t1.BCH) -- 常规号直接转换为数值
+        END AS bed_number
+        FROM
+        T_HL_YW_BRDJXX t1
+        WHERE
+        t1.RYCYZT = '1'
+        AND t1.del_flag = '0'
+        <if test="yljgid != null and yljgid != ''">
+            AND t1.YLJGID = #{yljgid}
+        </if>
+        <!--<if test="hsid != null and hsid != ''">
+            AND t1.HSID = #{hsid}
+        </if>-->
+        <if test="hzzt != null and hzzt != ''">
+            AND (
+            t1.HZZT LIKE CONCAT('%,', #{hzzt}, ',%')
+            OR t1.HZZT LIKE CONCAT(#{hzzt}, ',%')
+            OR t1.HZZT LIKE CONCAT('%,', #{hzzt})
+            OR t1.HZZT = #{hzzt}
+            )
+        </if>
+        <choose>
+            <when test="bqid!=null and bqid!=''">
+                AND t1.BQID=#{bqid}
+            </when>
+            <otherwise>
+                AND t1.BQID IN
+                <foreach collection="bqList" item="item" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </otherwise>
+        </choose>
+        ORDER BY is_extra_bed ASC, bed_number ASC
+    </select>
+    <select id="findNursingTaskList"
+            resultType="com.shdata.health.carezy.patientmanage.vo.NursingTaskVo"
+            parameterType="com.shdata.health.carezy.patientmanage.vo.NursingTaskSearchVo">
+        SELECT
+        t1.ID as id,
+        t1.BCH as bch,
+        t1.XM as xm,
+        t1.NL as nl,
+        t1.SFZH as sfzh,
+        t1.XB as xb,
+        t1.ZYH as zyh,
+        t1.RYSJ as rysj,
+        t1.CYSJ as cysj,
+        t1.YSID as ysid,
+        CASE
+        WHEN t1.BCH LIKE '+%' THEN 0 -- 加床号标记为 0
+        ELSE 1 -- 常规号标记为 1
+        END AS is_extra_bed,
+        CASE
+        WHEN t1.BCH LIKE '+%' THEN TO_NUMBER(SUBSTR(t1.BCH, 2)) -- 提取加床号的数值部分
+        ELSE TO_NUMBER(t1.BCH) -- 常规号直接转换为数值
+        END AS bed_number
+        FROM
+        T_HL_YW_BRDJXX t1
+        WHERE
+        t1.RYCYZT = '1'
+        AND t1.del_flag = '0'
+        <if test="yljgid != null and yljgid != ''">
+            AND t1.YLJGID = #{yljgid}
+        </if>
+        <!--<if test="hsid != null and hsid != ''">
+            AND t1.HSID = #{hsid}
+        </if>-->
+        <if test="hzzt != null and hzzt != ''">
+            AND (
+            t1.HZZT LIKE CONCAT('%,', #{hzzt}, ',%')
+            OR t1.HZZT LIKE CONCAT(#{hzzt}, ',%')
+            OR t1.HZZT LIKE CONCAT('%,', #{hzzt})
+            OR t1.HZZT = #{hzzt}
+            )
+        </if>
+        <choose>
+            <when test="bqid!=null and bqid!=''">
+                AND t1.BQID=#{bqid}
+            </when>
+            <otherwise>
+                AND t1.BQID IN
+                <foreach collection="bqList" item="item" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </otherwise>
+        </choose>
+        ORDER BY is_extra_bed ASC, bed_number ASC
+    </select>
+
+
+    <select id="getHealthEducationQuery"
+            resultType="com.shdata.health.carezy.patientmanage.vo.HealthEducationVo"
+            parameterType="com.shdata.health.carezy.patientmanage.vo.PressureInjuryRiskSummarySearchVo">
+
+    </select>
+    <select id="getInfoByHealthEducationSearchVo"
+            resultType="com.shdata.health.carezy.whiteBoard.entity.PatientRegistrationInformation"
+            parameterType="com.shdata.health.carezy.patientmanage.vo.HealthEducationSearchVo">
+        select * from T_HL_YW_BRDJXX t where t.DEL_FLAG='0' and t.RYCYZT='1'
+        <if test="bch!=null and bch!=''">
+            and t.BCH=#{bch}
+        </if>
+        <if test="hsid!=null and hsid!=''">
+            and t.HSID=#{hsid}
+        </if>
+        <if test="bqid != null and bqid!=''">
+            and t.BQID =#{bqid}
+        </if>
+        <if test="yljgid != null and yljgid!=''">
+            and t.YLJGID=#{yljgid}
+        </if>
+    </select>
+    <select id="getWsList" resultType="com.shdata.health.carezy.forms.vo.DicHljlwsVo">
+        select w.*
+        from T_HL_DIC_WSJGDZB t
+                 inner join T_HL_DIC_HLJLWS w on w.id = t.wsid
+        where w.del_flag = '0'
+          and t.yljgid = #{organId}
+          and w.qtbj = '0'
+    </select>
+    <!--<select id="listRetrievePatients"
+            resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationVo"
+            parameterType="com.shdata.health.carezy.patientmanage.vo.VitalSignSearchFiltersVo">
+        SELECT t.*
+        FROM T_HL_YW_BRDJXX t
+        where t.RYCYZT='1' and t.del_flag='0'
+        <if test="hsid!=null and hsid!=''">
+            and t.HSID=#{hsid}
+        </if>
+        <if test="bqid!=null and bqid!=''">
+            and t.BQID=#{bqid}
+        </if>
+        <if test="hzzt != null and hzzt != ''">
+            AND (
+            t.HZZT LIKE CONCAT('%,', #{hzzt}, ',%')
+            OR t.HZZT LIKE CONCAT(#{hzzt}, ',%')
+            OR t.HZZT LIKE CONCAT('%,', #{hzzt})
+            OR t.HZZT = #{hzzt}
+            )
+        </if>
+        <if test="yljgid!=null and yljgid!=''">
+            and t.YLJGID=#{yljgid}
+        </if>
+    </select>-->
+    <select id="listRetrievePatients"
+            resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationVo"
+            parameterType="com.shdata.health.carezy.patientmanage.vo.VitalSignSearchFiltersVo">
+        SELECT t.*,
+        t.NL as nl,
+        CASE
+        WHEN t.BCH LIKE '+%' THEN 0 -- 加床号标记为 0
+        ELSE 1 -- 常规号标记为 1
+        END AS is_extra_bed,
+        CASE
+        WHEN t.BCH LIKE '+%' THEN TO_NUMBER(SUBSTR(t.BCH, 2)) -- 提取加床号的数值部分
+        ELSE TO_NUMBER(t.BCH) -- 常规号直接转换为数值
+        END AS bed_number
+        FROM T_HL_YW_BRDJXX t
+        WHERE t."RYCYZT" = '1'
+        AND t."DEL_FLAG" = '0'
+        <!--<if test="hsid!=null and hsid!=''">
+            AND t."HSID" = #{hsid}
+        </if>-->
+        <if test="bqid!=null and bqid!=''">
+            AND t."BQID" = #{bqid}
+        </if>
+        <if test="hzzt != null and hzzt != ''">
+            AND (
+            t."HZZT" LIKE CONCAT('%,', #{hzzt}, ',%')
+            OR t."HZZT" LIKE CONCAT(#{hzzt}, ',%')
+            OR t."HZZT" LIKE CONCAT('%,', #{hzzt})
+            OR t."HZZT" = #{hzzt}
+            )
+        </if>
+        <if test="yljgid!=null and yljgid!=''">
+            AND t."YLJGID" = #{yljgid}
+        </if>
+        ORDER BY is_extra_bed ASC, bed_number ASC
+
+    </select>
+
+    <select id="findAll" resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationVo">
+        SELECT
+            t.* from
+            T_HL_YW_BRDJXX t
+        WHERE
+            t.del_flag = '0'
+          and t.yljgid=#{yljgid} and t.rycyzt = '1'
+    </select>
+    <select id="findBybchList" resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationBchVo">
+        select t.id brid, t.xm, t.zdid, d.zdmc mzzd, t.yszd, t.gm, t.xb, t.nl from T_HL_YW_BRDJXX t
+            left join T_HL_DIC_JBZD d on t.ZDID = d.id where
+            t.yljgid=#{organId} and t.bch=#{bch} and t.bqid=#{bqid} and t.rycyzt = '1'
+        order by t.djrq desc limit 1
+    </select>
+    <select id="riskSummary" resultType="com.shdata.health.carezy.patientmanage.vo.RiskBaseInfo"
+            parameterType="com.shdata.health.carezy.patientmanage.vo.RegistInformationSearchVo">
+        SELECT
+        t.id,
+        t.bch,
+        t.zyh,
+        t.xm,
+        t.nl,
+        t.xb,
+        t.rysj,
+        DATEDIFF(DAY, t.RYSJ,  NOW()) as zyts,
+        <foreach collection="riskFormList" item="item" index="index">
+            (SELECT CONCAT(COALESCE(zf, 0),'-', COALESCE(JL, '')) FROM T_HL_YW_HLJLWSSYB
+            WHERE brid = t.id AND wsid = #{item.id} and (fxdj = '4' or fxdj = '5') and del_flag = '0' AND rq = (SELECT MAX(rq) FROM T_HL_YW_HLJLWSSYB WHERE brid = t.id AND wsid = #{item.id}) order by update_time desc limit 1) as r${item.wsbm}
+            <if test="index != riskFormList.size() - 1">,</if>
+        </foreach>
+        FROM
+        V_HL_HZLB t
+        WHERE
+        t.rycyzt = '1'
+        <if test="patientStatus != null and yljgid != ''">
+            AND t.hzsxlx like concat('%',#{patientStatus},'%')
+        </if>
+        <choose>
+            <when test="wards!=null and wards!=''">
+                AND t.bqid=#{wards}
+            </when>
+            <otherwise>
+                AND t.bqid IN
+                <foreach collection="bqList" item="item" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </otherwise>
+        </choose>
+
+        and t.yljgid=#{yljgid}
+
+    </select>
+    <select id="riskCount" resultType="com.shdata.health.carezy.patientmanage.vo.RiskVo">
+        SELECT
+        <foreach collection="riskFormList" item="item" index="index">
+            (SELECT COUNT(DISTINCT t.brid) FROM T_HL_YW_HLJLWSSYB t
+            INNER JOIN T_HL_YW_BRDJXX b ON b.id = t.BRID
+            WHERE t.wsid = #{item.id}
+            AND b.RYCYZT = '1'
+            AND (t.fxdj = '4' OR t.FXDJ = '5')
+            AND t.DEL_FLAG = '0'
+            and t.rq = (
+            SELECT MAX(t2.rq)
+            FROM T_HL_YW_HLJLWSSYB t2
+            WHERE t2.wsid = t.wsid
+            AND t2.brid = t.brid ORDER BY t.update_time DESC LIMIT 1
+            )
+            <choose>
+                <when test="wards!=null and wards!=''">
+                    AND b.bqid=#{wards}
+                </when>
+                <otherwise>
+                    AND b.bqid IN
+                    <foreach collection="bqList" item="item2" open="(" separator="," close=")">
+                        #{item2}
+                    </foreach>
+                </otherwise>
+            </choose>
+            and t.yljgid=#{yljgid}) AS r${item.wsbm}
+            <if test="index != riskFormList.size() - 1">,</if>
+        </foreach>
+
+
+    </select>
+    <select id="happenCount" resultType="com.shdata.health.carezy.patientmanage.vo.RiskVo">
+
+
+        SELECT
+
+        COALESCE(SUM(CASE WHEN b1.FXFSLB = '1' THEN 1 ELSE 0 END), 0) AS r02Happen,
+        COALESCE(SUM(CASE WHEN b1.FXFSLB = '2' THEN 1 ELSE 0 END), 0) AS r03Happen,
+        COALESCE(SUM(CASE WHEN b1.FXFSLB = '3' THEN 1 ELSE 0 END), 0) AS r05Happen
+        FROM
+        V_HL_HZLB t
+        LEFT JOIN T_HL_YW_HLJLWSSYB b1 ON t.id = b1.brid AND b1.wsid = #{fswsid} AND b1.rq = (SELECT MAX(sub_b1.rq) FROM T_HL_YW_HLJLWSSYB sub_b1 WHERE sub_b1.brid = t.id AND sub_b1.wsid = #{fswsid})
+        WHERE
+        t.rycyzt = '1'
+        <if test="patientStatus != null and yljgid != ''">
+            AND t.hzsxlx like concat('%',#{patientStatus},'%')
+        </if>
+        <choose>
+            <when test="wards!=null and wards!=''">
+                AND t.bqid=#{wards}
+            </when>
+            <otherwise>
+                AND t.bqid IN
+                <foreach collection="bqList" item="item" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </otherwise>
+        </choose>
+        and t.yljgid=#{yljgid}
+    </select>
+    <select id="riskSummaryPress" resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationVo">
+        SELECT
+
+        t.*
+        FROM
+        T_HL_YW_BRDJXX t
+        inner JOIN T_HL_YW_HLJLWSSYB b1 ON t.id = b1.brid AND (b1.fxdj = '4' or b1.fxdj = '5') AND b1.wsid = #{ycwsid} AND b1.rq = (SELECT MAX(sub_b1.rq) FROM T_HL_YW_HLJLWSSYB sub_b1 WHERE sub_b1.brid = t.id AND sub_b1.wsid = #{ycwsid})
+
+        WHERE
+        t.del_flag = '0'
+        AND t.rycyzt = '1'
+        <if test="patientStatus != null and patientStatus != ''">
+            AND t.hzzt like concat('%',#{patientStatus},'%')
+        </if>
+        <choose>
+            <when test="wards!=null and wards!=''">
+                AND t.bqid=#{wards}
+            </when>
+            <otherwise>
+                AND t.bqid IN
+                <foreach collection="bqList" item="item" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </otherwise>
+        </choose>
+        and t.yljgid=#{yljgid}
+    </select>
+    <select id="getBatchList" resultType="com.shdata.health.carezy.forms.vo.FormsIndexVo">
+        SELECT * FROM T_HL_YW_HLJLWSSYB t
+        WHERE t.del_flag='0'
+        <if test="bridList != null and bridList.size() > 0">
+            AND t.BRID IN
+            <foreach item="brid" collection="bridList" open="(" separator="," close=")">
+                #{brid}
+            </foreach>
+        </if>
+        <if test="wsbm != null"> AND t.WSBM = #{wsbm} </if>
+        <if test="sj != null"> AND t.SJ = #{sj} </if>
+        <if test="yljgid != null"> AND t.YLJGID = #{yljgid} </if>
+        ORDER BY t.UPDATE_TIME DESC
+    </select>
+    <select id="findAllBchList"
+            resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationBchListVo">
+        SELECT
+            t.bch, t.bqid from
+            T_HL_YW_BRDJXX t
+        WHERE
+            t.del_flag = '0'
+          and t.yljgid=#{yljgid} and t.rycyzt = '1'
+
+    </select>
+    <select id="findById2" resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationVo">
+        SELECT
+            t.*,d1.zdmc
+
+        FROM
+            T_HL_YW_BRDJXX t
+                left join T_HL_DIC_JBZD d1 on t.ZDID = d1.id
+                 where t.id=#{id}
+    </select>
+    <select id="queryNewIn" resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationVo">
+        select bqid, bch from T_HL_YW_BRDJXX t where TRUNC(rysj) = TRUNC(SYSDATE)
+        and t.del_flag='0' and t.rycyzt = '1' and t.yljgid=#{yljgid}
+        and t.bqid in
+        <foreach item="item" collection="wardIds" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+    <select id="queryNewOut" resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationVo">
+        select bqid, bch from T_HL_YW_BRDJXX t where TRUNC(rysj) = TRUNC(SYSDATE)
+        and t.del_flag='0' and t.rycyzt != '1' and t.yljgid=#{yljgid}
+        and t.bqid in
+        <foreach item="item" collection="wardIds" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+    <select id="queryTomorrowOut" resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationVo">
+        select bqid, bch from T_HL_YW_BRDJXX t where hzzt like concat('%','02','%')
+        and t.del_flag='0' and t.rycyzt = '1' and t.yljgid=#{yljgid}
+        and t.bqid in
+        <foreach item="item" collection="wardIds" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+    <select id="queryBeDying" resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationVo">
+        select bqid, bch from T_HL_YW_BRDJXX t where hzzt like concat('%','13','%')
+        and t.del_flag='0' and t.rycyzt = '1' and t.yljgid=#{yljgid}
+        and t.bqid in
+        <foreach item="item" collection="wardIds" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+    <select id="listRetrievePatientss"
+            resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationListVo"
+            parameterType="com.shdata.health.carezy.patientmanage.vo.PatientSearchVo">
+        SELECT t.*,
+               t.NL as nl,
+        CASE
+        WHEN t.BCH LIKE '+%' THEN 0 -- 加床号标记为 0
+        ELSE 1 -- 常规号标记为 1
+        END AS is_extra_bed,
+        CASE
+        WHEN t.BCH LIKE '+%' THEN TO_NUMBER(SUBSTR(t.BCH, 2)) -- 提取加床号的数值部分
+        ELSE TO_NUMBER(t.BCH) -- 常规号直接转换为数值
+        END AS bed_number
+        FROM T_HL_YW_BRDJXX t
+        WHERE t."RYCYZT" = '1'
+        AND t."DEL_FLAG" = '0'
+        <!--<if test="hsid!=null and hsid!=''">
+            AND t."HSID" = #{hsid}
+        </if>-->
+        <choose>
+            <when test="bqid!=null and bqid!=''">
+                AND t.BQID=#{bqid}
+            </when>
+            <otherwise>
+                AND t.BQID IN
+                <foreach collection="bqList" item="item" open="(" separator="," close=")">
+                    #{item}
+                </foreach>
+            </otherwise>
+        </choose>
+        <if test="hzzt != null and hzzt != ''">
+            AND (
+            t."HZZT" LIKE CONCAT('%,', #{hzzt}, ',%')
+            OR t."HZZT" LIKE CONCAT(#{hzzt}, ',%')
+            OR t."HZZT" LIKE CONCAT('%,', #{hzzt})
+            OR t."HZZT" = #{hzzt}
+            )
+        </if>
+        <if test="yljgid!=null and yljgid!=''">
+            AND t."YLJGID" = #{yljgid}
+        </if>
+        ORDER BY is_extra_bed ASC, bed_number ASC
+
+    </select>
+    <select id="queryInAllQuery" resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationVo">
+        select bqid, bch from T_HL_YW_BRDJXX t where t.del_flag='0' and t.rycyzt = '1' and t.yljgid=#{yljgid}
+        and t.bqid in
+        <foreach item="item" collection="wardIds" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+
+    </select>
+    <select id="singleRiskSummary" resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationVo">
+        SELECT
+        t.*
+        FROM
+        T_HL_YW_BRDJXX t
+        inner JOIN T_HL_YW_HLJLWSSYB b1 ON t.id = b1.brid AND (b1.fxdj = '4' or b1.fxdj = '5') AND b1.wsid = #{wsid} AND b1.rq = (SELECT MAX(sub_b1.rq) FROM T_HL_YW_HLJLWSSYB sub_b1 WHERE sub_b1.brid = t.id AND sub_b1.wsid = #{wsid} order by sub_b1.update_time DESC)
+
+        WHERE
+        t.del_flag = '0'
+        AND t.rycyzt = '1'
+        and b1.del_flag='0'
+        AND t.bqid IN
+        <foreach collection="wardIds" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+        and t.yljgid=#{yljgid}
+    </select>
+    <select id="hldjQuery" resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationVo">
+        SELECT * FROM T_HL_YW_BRDJXX t
+        WHERE t.del_flag = '0'
+          AND t.rycyzt = '1'
+          AND t.HLDJ = #{hldj}
+          AND t.yljgid=#{yljgid}
+          <if test="wardIds != null and wardIds.size() > 0">
+              AND t.bqid IN
+              <foreach collection="wardIds" item="item" open="(" separator="," close=")">
+                #{item}
+              </foreach>
+          </if>
+    </select>
+    <select id="ConstraintRiskSummary"
+            resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationVo">
+        SELECT
+        t.*
+        FROM
+        T_HL_YW_BRDJXX t
+        inner JOIN T_HL_YW_HLJLWSSYB b1 ON t.id = b1.brid AND b1.wsid = #{wsid} AND b1.rq = (SELECT MAX(sub_b1.rq) FROM T_HL_YW_HLJLWSSYB sub_b1 WHERE sub_b1.brid = t.id AND sub_b1.wsid = #{wsid} order by sub_b1.update_time DESC)
+
+        WHERE
+        t.del_flag = '0'
+        AND t.rycyzt = '1'
+        and b1.del_flag='0'
+        AND t.bqid IN
+        <foreach collection="wardIds" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+        and t.yljgid=#{yljgid}
+    </select>
+
+
+    <update id="updatePatientStatus"
+            parameterType="com.shdata.health.carezy.patientmanage.vo.RegistInformationSearchVo">
+        UPDATE T_HL_YW_BRDJXX t
+        SET t.hzzt=#{patientStatus}
+        WHERE t.id = #{brid}
+    </update>
+    <update id="saveYszdById">
+        update T_HL_YW_BRDJXX set yszd=#{yszd} where id=#{id}
+    </update>
+</mapper>

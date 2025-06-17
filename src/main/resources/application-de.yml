@@ -1,0 +1,28 @@
+# 数据源配置
+spring:
+  application:
+    name: health-care-dev
+  datasource:
+    driverClassName: dm.jdbc.driver.DmDriver
+    url: jdbc:dm://172.20.105.193:9001
+    username: U_HLYTH_ZY
+    password: shdata_u_hlyth_zy
+
+  data:
+    redis:
+      host: redis.shdata.me
+      password: shdata9001
+      port: 9001
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://172.20.107.35:7101/eureka
+
+# 日志文件
+logging:
+  file:
+    path: ./HC_logs/carezy/

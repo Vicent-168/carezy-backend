@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shdata.health.carezy.patientmanage.mapper.TaskMapper">
+    <update id="updateBatch">
+        <foreach collection="list" item="item" separator=";">
+            UPDATE T_HL_YW_ZYHLRWB
+            SET
+            BRID = #{item.brid},
+            RWMC = #{item.rwmc},
+            RWDM = #{item.rwdm},
+            RWZT = #{item.rwzt},
+            WSID = #{item.wsid},
+            BLWSID = #{item.blwsid},
+            RWJHKSSJ = #{item.rwjhkssj},
+            RWJHJSSJ = #{item.rwjhjssj},
+            RWJHTXSJ = #{item.rwjhtxsj},
+            RWWCSJ = #{item.rwwcsj},
+            RWLX = #{item.rwlx},
+            REMARKS = #{item.rwmarks}
+            WHERE ID = #{item.id}
+        </foreach>
+
+    </update>
+    <select id="findByPage" resultType="com.shdata.health.carezy.patientmanage.vo.TaskVo"
+            parameterType="com.shdata.health.carezy.patientmanage.vo.TaskSearchVo">
+        SELECT * FROM T_HL_YW_ZYHLRWB t WHERE t.del_flag='0'
+        <if test="needOrder">ORDER BY t.update_time DESC,t.id</if>
+    </select>
+    <select id="getTodoTaskByBrid" resultType="com.shdata.health.carezy.patientmanage.vo.TaskVo">
+        SELECT * FROM T_HL_YW_ZYHLRWB t WHERE t.del_flag='0' and t.brid=#{brid}
+        and t.rwzt='2'
+    </select>
+    <select id="getTaskByBridAndWsid" resultType="com.shdata.health.carezy.patientmanage.vo.TaskVo">
+        SELECT * FROM T_HL_YW_ZYHLRWB t WHERE t.DEL_FLAG = '0'
+        AND t.BRID = #{brid}
+        AND t.WSID = #{wsid}
+        AND t.rwzt= #{rwzt}
+    </select>
+    <delete id="deleteByBridAndWsid">
+        DELETE FROM T_HL_YW_ZYHLRWB t WHERE t.DEL_FLAG = '0'
+                                        AND t.BRID = #{brid}
+                                        AND t.WSID = #{wsid}
+                                        AND t.rwzt='2'
+    </delete>
+    <insert id="insertTasks">
+        INSERT INTO T_HL_YW_ZYHLRWB (ID,BRID,RWMC, RWDM,RWZT,WSID,BLWSID,RWJHKSSJ,RWJHJSSJ,RWJHTXSJ,RWWCSJ,RWLX,REMARKS)
+        VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.id},#{item.brid},#{item.rwmc},#{item.rwdm}, #{item.rwzt}, #{item.wsid}, #{item.blwsid}, #{item.rwjhkssj}, #{item.rwjhjssj}, #{item.rwjhtxsj}, #{item.rwwcsj}, #{item.rwlx}, #{item.rwmarks})
+        </foreach>
+    </insert>
+
+</mapper>

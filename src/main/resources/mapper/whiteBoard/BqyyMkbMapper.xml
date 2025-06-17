@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shdata.health.carezy.whiteBoard.mapper.BqyyMkbMapper">
+
+    <select id="findByPage" resultType="com.shdata.health.carezy.whiteBoard.vo.BqyyMkbVo"
+            parameterType="com.shdata.health.carezy.whiteBoard.vo.BqyyMkbSearchVo">
+        SELECT * FROM T_HL_DP_BQYY_MKB t WHERE t.del_flag='0'
+        <if test="needOrder">ORDER BY t.update_time DESC,t.id</if>
+    </select>
+    <select id="findByOrganId" resultType="com.shdata.health.carezy.whiteBoard.entity.BqyyMkb">
+        SELECT * FROM T_HL_DP_BQYY_MKB t WHERE t.del_flag='0'
+        and (t.YLJGID=#{organId} or t.YLJGID is null or t.YLJGID='')
+        <if test="mklxs != null and mklxs.size() > 0">
+            and t.MKLX in
+            <foreach collection="mklxs" item="mklx" open="(" separator="," close=")">
+                #{mklx}
+            </foreach>
+        </if>
+        order by t.MKLX
+    </select>
+
+    <select id="selectDefaultMkAndSj" resultType="com.shdata.health.carezy.whiteBoard.entity.MkMkxmSj">
+        SELECT tmk.id AS mkid,
+               tmkxm.xmmc,
+               tmkxm.xmsx,
+               tsj.xmz,
+               tsj.xmz1,
+               tsj.xmz2,
+               tsj.xmz3,
+               tmk.mklx,
+               tmk.mkmc,
+               tmkxm.xmid,
+               tmkxm.id mkxmid,
+               tsj.rq,
+               tmkxm.sfzs,
+               tsj.update_time
+        FROM T_HL_DP_BQYY_MKB tmk
+        JOIN T_HL_DP_BQYY_MKXMB tmkxm ON tmk.id = tmkxm.mkid
+        LEFT JOIN T_HL_DP_BQYY_DPSJ tsj ON tmkxm.id = tsj.mkxmid
+        AND tsj.del_flag = '0'
+        AND (tsj.bqid = #{bqid} OR tsj.bqid IS NULL)
+        WHERE tmk.del_flag = '0'
+        AND tmkxm.del_flag = '0'
+        AND (tmk.yljgid IS NULL
+        OR tmk.yljgid = '')
+        AND tmk.mklx
+        IN
+        <foreach item="item" index="index" collection="mklxList" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+        ORDER BY tmkxm.xmsx ASC;
+    </select>
+
+    <select id="selectMkAndSjByOrganId" resultType="com.shdata.health.carezy.whiteBoard.entity.MkMkxmSj">
+        SELECT tmk.id AS mkid,
+               tmkxm.xmmc,
+               tmkxm.xmsx,
+               tsj.xmz,
+               tsj.xmz1,
+               tsj.xmz2,
+               tsj.xmz3,
+               tmk.mklx,
+               tmk.mkmc,
+               tmkxm.xmid,
+               tmkxm.id mkxmid,
+               tsj.rq,
+               tmkxm.sfzs,
+               tsj.update_time
+        FROM T_HL_DP_BQYY_MKB tmk
+                 JOIN T_HL_DP_BQYY_MKXMB tmkxm ON tmk.id = tmkxm.mkid
+                 LEFT JOIN T_HL_DP_BQYY_DPSJ tsj ON tmkxm.id = tsj.mkxmid
+                 AND tsj.del_flag = '0'
+                 AND (tsj.bqid = #{bqid} OR tsj.bqid IS NULL)
+        WHERE tmk.yljgid = #{organId}
+          AND tmk.del_flag = '0'
+          AND tmkxm.del_flag = '0'
+        AND tmk.mklx
+        IN
+        <foreach item="item" index="index" collection="mklxList" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+        ORDER BY tmkxm.xmsx ASC
+    </select>
+
+    <update id="updateBatch">
+        <foreach collection="list" item="item" separator=";">
+            UPDATE U_HLYTH_ZY.T_HL_DP_BQYY_MKB
+            <set>
+                <if test="item.yljgId != null">YLJGID = #{item.yljgId},</if>
+                <if test="item.mklx != null">MKLX = #{item.mklx},</if>
+                <if test="item.mkmc != null">MKMC = #{item.mkmc},</if>
+                <if test="item.delFlag != null">DEL_FLAG = #{item.delFlag},</if>
+                <if test="item.createBy != null">CREATE_BY = #{item.createBy},</if>
+                <if test="item.createTime != null">CREATE_TIME = #{item.createTime},</if>
+                <if test="item.updateBy != null">UPDATE_BY = #{item.updateBy},</if>
+                <if test="item.updateTime != null">UPDATE_TIME = #{item.updateTime},</if>
+                <if test="item.remarks != null">REMARKS = #{item.remarks},</if>
+            </set>
+            WHERE ID = #{item.id}
+        </foreach>
+    </update>
+
+    <select id="selectDefaultMkXmSj" resultType="com.shdata.health.carezy.whiteBoard.entity.MkMkxmSj">
+        SELECT tmk.id AS mkid,
+        tmkxm.xmsx,
+        tsj.xmz,
+        tsj.xmz1,
+        tsj.xmz2,
+        tsj.xmz3,
+        tmk.mklx,
+        tmk.mkmc,
+        tmkxm.xmid,
+        tmkxm.id mkxmid,
+        tsj.rq,
+        tmkxm.sfzs,
+        tbx.dw,
+        tbx.xmmc,
+        tsj.update_time
+        FROM T_HL_DP_BQYY_MKB tmk
+        JOIN T_HL_DP_BQYY_MKXMB tmkxm ON tmk.id = tmkxm.mkid
+        JOIN T_HL_DP_BQYY_XMB tbx ON tbx.id = tmkxm.xmid
+        LEFT JOIN T_HL_DP_BQYY_DPSJ tsj ON tmkxm.id = tsj.mkxmid
+        AND tsj.del_flag = '0'
+        AND (tsj.yljgid = #{organId} OR tsj.yljgid IS NULL)
+        WHERE tmk.del_flag = '0'
+        AND tbx.del_flag = '0'
+        AND tmkxm.del_flag = '0'
+        AND (tmk.yljgid IS NULL
+        OR tmk.yljgid = '')
+        AND tmk.mklx
+        IN
+        <foreach item="item" index="index" collection="mklxList" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+        ORDER BY tmkxm.xmsx ASC;
+    </select>
+
+    <select id="selectLastDefaultMkXmSj" resultType="com.shdata.health.carezy.whiteBoard.entity.MkMkxmSj">
+        SELECT b.ID MKID,b.MKLX,b.MKMC,d.MKXMID,mx.XMID,mx.XMMC,d.XMZ,d.XMZ1,d.XMZ2,d.XMZ3 FROM T_HL_DP_BQYY_DPSJ d
+        JOIN (
+        SELECT t.MKXMID,MAX(t.UPDATE_TIME) AS mtime FROM T_HL_DP_BQYY_DPSJ t
+        JOIN T_HL_DP_BQYY_MKXMB mx ON t.MKXMID =mx.ID AND mx.DEL_FLAG ='0'
+        JOIN T_HL_DP_BQYY_MKB b ON mx.MKID=b.ID AND b.DEL_FLAG ='0'
+        WHERE t.DEL_FLAG ='0' AND t.XMZ IS NOT NULL AND b.MKLX IN
+        <foreach collection="mklxs" item="mklx" open="(" separator="," close=")">
+            #{mklx}
+        </foreach>
+        AND t.YLJGID=#{organId}
+        <if test="ward != null and ward != ''">
+            AND t.BQID=#{ward}
+        </if>
+        GROUP BY t.MKXMID
+        ) t ON d.MKXMID = t.MKXMID AND d.UPDATE_TIME = t.mtime
+        JOIN T_HL_DP_BQYY_MKXMB mx ON mx.ID=t.MKXMID
+        JOIN T_HL_DP_BQYY_MKB b ON mx.MKID=b.ID
+        WHERE d.YLJGID=#{organId}
+        <if test="ward != null and ward != ''">
+            AND d.BQID=#{ward}
+        </if>
+    </select>
+</mapper>

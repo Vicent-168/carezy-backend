@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shdata.health.carezy.forms.mapper.VitalSignsAllergiesMapper">
+    <insert id="insertVitalSignsAllergiesList">
+        INSERT INTO T_HL_YW_SMTZ_CRLB (ID, BRIR, BLWSID, CLRQ, CLSJ, GMLX, YYX, FYMS)
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.id}, #{item.brid} #{item.blwsid}, #{item.clrq}, #{item.clsj}, #{item.gmlx}, #{item.yyx}, #{item.fyms})
+        </foreach>
+    </insert>
+
+    <delete id="deleteVitalSignsAllergies">
+        DELETE FROM T_HL_YW_SMTZ_CRLB
+        WHERE ID IN
+        <foreach collection="list" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+    <select id="getVitalSignsAllergies" resultType="com.shdata.health.carezy.forms.vo.VitalSignsAllergiesVo">
+        select * from T_HL_YW_SMTZ_CRLB t WHERE
+        <if test="blwsid!='' and blwsid!=null">  t.BLWSID = #{blwsid} </if>
+    </select>
+
+
+</mapper>

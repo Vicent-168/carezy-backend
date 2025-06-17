@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shdata.health.carezy.forms.mapper.DicHljlwsxmMapper">
+
+
+    <select id="getProject" resultType="com.shdata.health.carezy.forms.vo.DicHljlwsxmVo">
+        SELECT WSID, ZDLX, ZDLXMS, ZDDM, ZDMC, FZ, JB FROM T_HL_DIC_HLJLWSXM t WHERE t.del_flag='0'
+        <if test="wsid!='' and wsid!=null"> AND t.WSID = #{wsid} </if>
+        <if test="zdlx!='' and zdlx!=null"> AND t.ZDLX = #{zdlx} </if>
+        ORDER BY t.ZDXH
+    </select>
+    <select id="findByType" resultType="com.shdata.health.common.dict.Dict">
+        SELECT ZDDM as code,  ZDMC as name FROM T_HL_DIC_HLJLWSXM t WHERE t.del_flag='0'
+        <if test="wsid!='' and wsid!=null"> AND t.WSID = #{wsid} </if>
+        <if test="type!='' and type!=null"> AND t.ZDLX = #{type} </if>
+    </select>
+
+</mapper>

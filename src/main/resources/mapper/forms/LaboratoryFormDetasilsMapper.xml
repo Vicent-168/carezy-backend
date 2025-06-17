@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shdata.health.carezy.forms.mapper.LaboratoryFormDetasilsMapper">
+
+    <select id="findByPage" resultType="com.shdata.health.carezy.forms.vo.LaboratoryFormDetasilsVo"
+            parameterType="com.shdata.health.carezy.forms.vo.LaboratoryFormDetasilsSearchVo">
+        SELECT * FROM T_HL_YW_ZYHLHYDXQ t
+        <if test="needOrder">ORDER BY t.SHSJ DESC,t.id</if>
+    </select>
+    <select id="getLaboratoryFormDetails"
+            resultType="com.shdata.health.carezy.forms.vo.LaboratoryFormDetasilsVo">
+        select * from T_HL_YW_ZYHLHYDXQ t where t.BGDH = #{bgdh}
+    </select>
+
+</mapper>

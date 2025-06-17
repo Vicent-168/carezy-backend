@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shdata.health.carezy.forms.mapper.DicHljlwsMapper">
+
+    <select id="getMcBywsbm" resultType="java.lang.String">
+        select t.MC from T_HL_DIC_HLJLWS t inner join T_HL_DIC_WSJGDZB b on b.WSID = t.ID
+        where t.qtbj = '0'  and t.DEL_FLAG = '0' and b.DEL_FLAG = '0' and b.YLJGID = #{yljgid} and t.WSBM = #{wsbm}
+    </select>
+    <select id="getwsidDictBywsbm" resultType="java.lang.String">
+        select t.id from T_HL_DIC_HLJLWS t
+                             inner join T_HL_DIC_WSJGDZB b on b.WSID = t.ID
+                    where t.WSBM = #{wsbm} and t.qtbj = '0'  and t.DEL_FLAG = '0' and b.DEL_FLAG = '0' and b.YLJGID = #{yljgid}
+    </select>
+    <select id="getwsflBywsid" resultType="com.shdata.health.carezy.forms.vo.DicHljlwsVo">
+        select *  from T_HL_DIC_HLJLWS t where t.ID = #{wsid} and t.DEL_FLAG = '0' and t.qtbj = '0'
+    </select>
+    <select id="getriskFormDictList" resultType="com.shdata.health.carezy.forms.vo.DicHljlwsVo">
+        select * from T_HL_DIC_HLJLWS t
+                             inner join T_HL_DIC_WSJGDZB b on b.WSID = t.ID
+        where t.FLDM = #{wsflFxpg} and t.qtbj = '0'  and t.DEL_FLAG = '0' and b.DEL_FLAG = '0' and b.YLJGID = #{organId}
+    </select>
+    <select id="getWsByWsfl" resultType="com.shdata.health.carezy.forms.vo.DicHljlwsVo">
+        select *  from T_HL_DIC_HLJLWS t INNER JOIN T_HL_DIC_WSJGDZB b ON t.ID = b.WSID WHERE t.DEL_FLAG = '0' AND b.DEL_FLAG = '0'  and t.qtbj = '0' AND t.FLDM = #{wsfl} and b.YLJGID = #{yljgid}
+    </select>
+
+</mapper>

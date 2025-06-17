@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shdata.health.carezy.whiteBoard.mapper.BqyyMkxmbMapper">
+
+    <select id="findByPage" resultType="com.shdata.health.carezy.whiteBoard.vo.BqyyMkxmbVo"
+            parameterType="com.shdata.health.carezy.whiteBoard.vo.BqyyMkxmbSearchVo">
+        SELECT * FROM T_HL_DP_BQYY_MKXMB t WHERE t.del_flag='0'
+        <if test="needOrder">ORDER BY t.update_time DESC,t.id</if>
+    </select>
+    <select id="findByMkdIds" resultType="com.shdata.health.carezy.whiteBoard.vo.BqyyMkxmbVo">
+        SELECT t.*,x.DW FROM T_HL_DP_BQYY_MKXMB t JOIN T_HL_DP_BQYY_XMB x ON t.XMID=x.ID
+        WHERE t.del_flag='0' and t.mkid in
+        <foreach collection="mkdIds" item="mkdId" open="(" separator="," close=")">
+            #{mkdId}
+        </foreach>
+    </select>
+
+    <select id="findByMkIds" resultType="com.shdata.health.carezy.whiteBoard.vo.BqyyMkXmVo">
+        SELECT mb.ID,mb.MKID,mb.XMID,mb.XMMC,x.BEAN,x.CS,x.SXJG
+        FROM T_HL_DP_BQYY_XMB x
+        JOIN T_HL_DP_BQYY_MKXMB mb ON x.ID=mb.XMID
+        WHERE x.DEL_FLAG='0' AND mb.DEL_FLAG='0' AND mb.MKID IN
+        <foreach collection="mkIds" item="mkid" open="(" separator="," close=")">
+            #{mkid}
+        </foreach>
+    </select>
+
+    <select id="findDefualtByBean" resultType="com.shdata.health.carezy.whiteBoard.vo.BqyyMkXmVo">
+        SELECT mb.ID,mb.MKID,mb.XMID,mb.XMMC,x.BEAN,x.CS,x.SXJG
+        FROM T_HL_DP_BQYY_XMB x JOIN T_HL_DP_BQYY_MKXMB mb ON x.ID=mb.XMID JOIN T_HL_DP_BQYY_MKB m on m.ID=mb.MKID
+        WHERE x.DEL_FLAG='0' AND mb.DEL_FLAG='0' AND m.DEL_FLAG='0' AND x.YLJGID is null AND m.YLJGID is null AND x.BEAN=#{bean}
+    </select>
+    <select id="selectByMkIdAndOrganId" resultType="com.shdata.health.carezy.whiteBoard.entity.BqyyMkxmb">
+        SELECT *
+        FROM T_HL_DP_BQYY_MKXMB tm
+                 JOIN T_HL_DP_BQYY_XMB tk ON tk.id = tm.xmid
+        WHERE tk.yljgid = #{organId}
+          AND tm.DEL_FLAG = '0'
+          AND tk.DEL_FLAG = '0'
+    </select>
+
+    <select id="selectByOrganId" resultType="com.shdata.health.carezy.whiteBoard.vo.BqyyMkXmVo">
+        SELECT
+        tm.ID,tm.MKID,tm.XMID,tm.XMMC,tm.sfzs,tm.xmsx,tm.CREATE_BY,tm.CREATE_TIME,tk.mklx
+        FROM T_HL_DP_BQYY_MKXMB tm
+        JOIN T_HL_DP_BQYY_MKB tk ON tk.id = tm.mkid
+        WHERE tk.yljgid = #{organId}
+        AND tm.DEL_FLAG = '0'
+        AND tk.DEL_FLAG = '0'
+        and tk.mklx in
+        <foreach collection="moduleTypeList" item="mklx" open="(" separator="," close=")">
+            #{mklx}
+        </foreach>
+    </select>
+
+    <update id="updateBatch">
+        <foreach collection="list" item="item" separator=";">
+            UPDATE U_HLYTH_ZY.T_HL_DP_BQYY_MKXMB
+            <set>
+                <if test="item.xmmc != null">XMMC = #{item.xmmc},</if>
+                <if test="item.xmsx != null">XMSX = #{item.xmsx},</if>
+                <if test="item.delFlag != null">DEL_FLAG = #{item.delFlag},</if>
+                <if test="item.createBy != null">CREATE_BY = #{item.createBy},</if>
+                <if test="item.createTime != null">CREATE_TIME = #{item.createTime},</if>
+                <if test="item.updateBy != null">UPDATE_BY = #{item.updateBy},</if>
+                <if test="item.updateTime != null">UPDATE_TIME = #{item.updateTime},</if>
+                <if test="item.remarks != null">REMARKS = #{item.remarks},</if>
+                <if test="item.sfzs != null">SFZS = #{item.sfzs},</if>
+            </set>
+            WHERE ID = #{item.id}
+        </foreach>
+    </update>
+
+    <select id="selectDefaultMkxm" resultType="com.shdata.health.carezy.whiteBoard.entity.MkMkxmSj">
+        SELECT
+            tmk.id AS mkid,
+            tmkxm.xmmc,
+            tmkxm.xmsx,
+            tmk.mklx,
+            tmk.mkmc,
+            tmkxm.xmid,
+            tmkxm.id mkxmid,
+            tmkxm.sfzs
+        FROM T_HL_DP_BQYY_MKB tmk
+                 JOIN T_HL_DP_BQYY_MKXMB tmkxm ON tmk.id = tmkxm.mkid
+        WHERE (tmk.yljgid = ''
+            OR tmk.yljgid IS NULL)
+          AND tmk.DEL_FLAG = '0'
+          AND tmkxm.DEL_FLAG = '0'
+        and tmk.mklx in
+        <foreach collection="mklxs" item="mklx" open="(" separator="," close=")">
+            #{mklx}
+        </foreach>
+    </select>
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shdata.health.carezy.forms.mapper.EventOccurrenceMapper">
+    <insert id="insertEventOccurrenceList">
+        INSERT INTO T_HL_YW_SJFSB (ID, BRIR, BLWSID, FSSJ, FSSHIJ, SJFSDD, YZCD, PGHS)
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.id}, #{item.brid} #{item.blwsid}, #{item.fssj}, #{item.fsshij}, #{item.sjfsdd}, #{item.yzcd}, #{item.pghs})
+        </foreach>
+    </insert>
+    <delete id="deleteEventOccurrence">
+        DELETE FROM T_HL_YW_SJFSB
+        WHERE ID IN
+        <foreach collection="list" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+    <select id="getEventOccurrence" resultType="com.shdata.health.carezy.forms.vo.EventOccurrenceVo">
+        select * from T_HL_YW_SJFSB t WHERE
+        <if test="blwsid!='' and blwsid!=null">  t.BLWSID = #{blwsid} </if>
+    </select>
+
+
+</mapper>

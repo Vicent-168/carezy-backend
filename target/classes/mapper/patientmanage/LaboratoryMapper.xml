@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shdata.health.carezy.patientmanage.mapper.LaboratoryMapper">
+
+    <select id="findByPage" resultType="com.shdata.health.carezy.patientmanage.vo.LaboratoryVo"
+            parameterType="com.shdata.health.carezy.patientmanage.vo.LaboratorySearchVo">
+        SELECT * FROM T_HL_YW_ZYHLHYD t WHERE t.del_flag='0'
+        <if test="needOrder">ORDER BY t.update_time DESC,t.id</if>
+    </select>
+    <select id="getAbnormalLaboratoryList" resultType="com.shdata.health.carezy.patientmanage.vo.LaboratoryVo"
+            parameterType="com.shdata.health.carezy.patientmanage.vo.LaboratorySearchVo">
+    SELECT * FROM T_HL_YW_ZYHLHYD t WHERE t.DX is not null and t.brid = #{brid}
+    </select>
+
+</mapper>

@@ -1,0 +1,95 @@
+server:
+  port: 7303
+  tomcat:
+    # tomcat的URI编码
+    uri-encoding: UTF-8
+    # tomcat最大线程数，默认为200
+    # Tomcat启动初始化的线程数，默认值25
+    threads:
+      min-spare: 30
+      max: 800
+  error:
+    include-message: always  #spring 2.3版本后对message进行了控制，默认返回是空需要显式指定always
+    include-exception: true
+    include-stacktrace: always
+    include-binding-errors: always
+
+
+# Spring配置
+spring:
+  application:
+    name: health-carezy
+  profiles:
+    active: de
+  cache:
+    type: redis
+    redis:
+      key-prefix: 'carezy'
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 15MB
+
+  openfeign:
+    circuitbreaker:
+      enabled: true
+    httpclient:
+      connection-timeout: 2000
+      disable-ssl-validation: true
+      # http连接池依赖 commons-pool2
+      max-connections: 200
+      max-connections-per-route: 50
+      time-to-live: 900
+      time-to-live-unit: seconds
+      hc5:
+        enabled: true
+        socket-timeout: 30
+        socket-timeout-unit: seconds
+    compression:
+      request:
+        # 请求压缩
+        enabled: true
+      response:
+        # 响应压缩
+        enabled: true
+
+  # 资源信息
+  messages:
+    # 国际化资源文件路径
+    basename: i18n/messages
+  datasource:
+    hikari:
+      pool-name: carezy-db #连接池名称
+      connection-timeout: 60000 #请求连接的超时时间
+      maximum-pool-size: 20 #最大连接数量
+      max-lifetime: 1800000 #连接的最长生命周期
+      keepalive-time: 1750000 #尝试保持连接的频率
+      connection-test-query: select 1 #连接验证sql
+
+logging:
+  file:
+    path: /HC_logs/carezy/
+  level:
+    root: ERROR
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: logfile
+
+mybatis-plus:
+  global-config:
+    db-config:
+      update-strategy: always
+  configuration:
+    jdbc-type-for-null: 'null'
+
+system:
+  id: hlc
+
+zacian:
+  feign: false
+
+hisync:
+  feign: true

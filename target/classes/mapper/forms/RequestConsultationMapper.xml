@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shdata.health.carezy.forms.mapper.RequestConsultationMapper">
+    <insert id="insertRequestConsultationList">
+        INSERT INTO T_HL_YW_QQHZB (ID, BRIR, BLWSID, JLSJ, SQSJ, FQBQ, QQDX, QQMD,HZQK,ZYZD,YHHZ,HZMD,HZSJ,HZYJ,HZYS)
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.id}, #{item.brid} #{item.blwsid}, #{item.jlsj}, #{item.sqsj}, #{item.fqbq}, #{item.qqdx}, #{item.qqmd}, #{item.hzqk}, #{item.zyzd}, #{item.yhhz}, #{item.hzmd}, #{item.hzsj}, #{item.hzyj}, #{item.hzys})
+        </foreach>
+    </insert>
+    <delete id="deleteRequestConsultation">
+        DELETE FROM T_HL_YW_QQHZB
+        WHERE ID IN
+        <foreach collection="list" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+    <select id="getRequestConsultation" resultType="com.shdata.health.carezy.forms.vo.RequestConsultationVo">
+        select * from T_HL_YW_QQHZB t WHERE
+        <if test="blwsid!='' and blwsid!=null">  t.BLWSID = #{blwsid} </if>
+    </select>
+</mapper>

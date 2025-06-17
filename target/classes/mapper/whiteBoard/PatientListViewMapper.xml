@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shdata.health.carezy.whiteBoard.mapper.PatientListViewMapper">
+
+    <select id="findByPage" resultType="com.shdata.health.carezy.whiteBoard.vo.PatientListViewVo"
+            parameterType="com.shdata.health.carezy.whiteBoard.vo.PatientListViewSearchVo">
+        SELECT * FROM V_HL_HZLB t WHERE t.del_flag='0'
+        <if test="needOrder">ORDER BY t.update_time DESC,t.id</if>
+    </select>
+
+</mapper>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.shdata.health.carezy.forms.mapper.FormsIndexMapper">
+    <delete id="deleteByDate">
+        DELETE FROM T_HL_YW_HLJLWSSYB t WHERE t.del_flag='0'
+        <if test="brid!='' and brid!=null"> AND t.BRID = #{brid} </if>
+        <if test="wsid!='' and wsid!=null"> AND t.WSID = #{wsid} </if>
+        <if test="wsfl!='' and wsfl!=null"> AND t.WSFL = #{wsfl} </if>
+        <if test="date!='' and date!=null"> AND TRUNC(t.RQ) = #{date}  </if>
+        <if test="yljgid!='' and yljgid!=null"> AND t.YLJGID = #{yljgid} </if>
+    </delete>
+
+    <select id="getIndex" resultType="com.shdata.health.carezy.forms.vo.FormsIndexVo">
+        SELECT * FROM T_HL_YW_HLJLWSSYB t
+        where t.del_flag='0'
+        <if test="id!='' and id!=null"> AND t.ID = #{id} </if>
+        <if test="brid!='' and brid!=null"> AND t.BRID = #{brid} </if>
+        <if test="wsid!='' and wsid!=null"> AND t.WSID = #{wsid} </if>
+        <if test="wsbm!='' and wsbm!=null"> AND t.WSBM = #{wsbm} </if>
+        <if test="wsfl!='' and wsfl!=null"> AND t.WSFL = #{wsfl} </if>
+        <if test="yljgid!='' and yljgid!=null"> AND t.YLJGID = #{yljgid} </if>
+        ORDER BY  t.UPDATE_TIME DESC
+    </select>
+    <select id="getList" resultType="com.shdata.health.carezy.forms.vo.FormsIndexVo">
+        SELECT t.*, b.MC as wsmc FROM T_HL_YW_HLJLWSSYB t inner join T_HL_DIC_HLJLWS b on t.WSID = b.ID
+        where t.del_flag='0' and b.del_flag='0'
+        <if test="brid!='' and brid!=null"> AND t.BRID = #{brid} </if>
+        <if test="wsid!='' and wsid!=null"> AND t.WSID = #{wsid} </if>
+        <if test="rq!='' and rq!=null"> AND t.RQ LIKE CONCAT('%',#{rq},'%')  </if>
+        <if test="wsbm!='' and wsbm!=null"> AND t.WSBM = #{wsbm} </if>
+        <if test="wsfl!='' and wsfl!=null"> AND t.WSFL = #{wsfl} </if>
+        <if test="yljgid!='' and yljgid!=null"> AND t.YLJGID = #{yljgid} </if>
+        ORDER BY  t.UPDATE_TIME DESC
+    </select>
+    <select id="getInfo" resultType="com.shdata.health.carezy.forms.vo.FormsIndexVo">
+        SELECT t.*, b.XM FROM T_HL_YW_HLJLWSSYB t inner join T_HL_YW_BRDJXX b on t.BRID = b.ID
+        where t.del_flag='0' and b.del_flag='0'
+        <if test="brid!='' and brid!=null"> AND t.BRID = #{brid} </if>
+        <if test="wsid!='' and wsid!=null"> AND t.WSID = #{wsid} </if>
+        <if test="rq!='' and rq!=null"> AND t.RQ LIKE CONCAT(#{rq},'%') </if>
+        <if test="yljgid!='' and yljgid!=null"> AND t.YLJGID = #{yljgid} </if>
+        ORDER BY  t.UPDATE_TIME DESC
+        limit 1
+    </select>
+
+    <select id="getList2" resultType="com.shdata.health.carezy.forms.vo.FormsIndexVo">
+        SELECT * FROM T_HL_YW_HLJLWSSYB t
+        where t.del_flag='0'
+        <if test="brid!='' and brid!=null"> AND t.BRID = #{brid} </if>
+        <if test="wsid!='' and wsid!=null"> AND t.WSID = #{wsid} </if>
+        <if test="rq!='' and rq!=null"> AND t.RQ LIKE CONCAT('%',#{rq},'%')  </if>
+        <if test="wsbm!='' and wsbm!=null"> AND t.WSBM = #{wsbm} </if>
+        <if test="wsfl!='' and wsfl!=null"> AND t.WSFL = #{wsfl} </if>
+        <if test="yljgid!='' and yljgid!=null"> AND t.YLJGID = #{yljgid} </if>
+        ORDER BY  t.UPDATE_TIME DESC limit 7
+    </select>
+
+    <select id="getWsidByylgjAndwsbm" resultType="java.lang.String">
+        SELECT WSID FROM T_HL_YW_HLJLWSSYB WHERE YLJGID = #{yljgid} AND WSBM = #{wsbm} and del_flag = '0' and BRID = #{brid} order by UPDATE_TIME desc limit 1
+    </select>
+
+    <select id="getWsidByylgjAndwsbm2" resultType="java.lang.String">
+        SELECT WSID FROM T_HL_YW_HLJLWSSYB WHERE YLJGID = #{yljgid} and del_flag = '0' AND WSBM = #{wsbm} order by UPDATE_TIME desc limit 1
+    </select>
+    <select id="getWs" resultType="com.shdata.health.carezy.forms.vo.DicHljlwsVo"
+            parameterType="com.shdata.health.carezy.forms.vo.WsbmSearchVo">
+        SELECT
+        t1.ID as id,
+        t1.MC as mc,
+        t1.XH as xh,
+        t1.WSBM as wsbm,
+        t1.FL as fl,
+        t1.FLDM as fldm,
+        t1.FLXH as wsfl,
+        t1.BBH as bbh,
+        T1.URL as url,
+        t2.WSID as wsid
+        FROM T_HL_DIC_HLJLWS t1 INNER JOIN T_HL_DIC_WSJGDZB t2 ON t1.ID = T2.WSID WHERE T2.DEL_FLAG = '0' AND
+        T1.DEL_FLAG = '0'
+        <if test="wsid!='' and wsid!=null">AND T1.ID = #{wsid}</if>
+        <if test="wsbm!='' and wsbm!=null">AND T1.WSBM = #{wsbm}</if>
+        <if test="fldm!='' and fldm!=null">AND T1.FLDM = #{fldm}</if>
+        <if test="yljgid!='' and yljgid!=null">AND T2.YLJGID = #{yljgid}</if>
+    </select>
+    <select id="getListByBatch" resultType="com.shdata.health.carezy.forms.vo.FormsIndexVo">
+        SELECT * FROM T_HL_YW_HLJLWSSYB
+        WHERE del_flag='0'
+        and ID IN
+        <foreach item="id" index="index" collection="list" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
+    <select id="getBatchList" resultType="com.shdata.health.carezy.forms.vo.FormsIndexVo">
+        SELECT * FROM T_HL_YW_HLJLWSSYB t
+        WHERE t.del_flag='0'
+        <if test="bridList != null and bridList.size() > 0">
+            AND t.BRID IN
+            <foreach item="brid" collection="bridList" open="(" separator="," close=")">
+                #{brid}
+            </foreach>
+        </if>
+        <if test="wsbm != null"> AND t.WSBM = #{wsbm} </if>
+        <if test="sj != null"> AND t.RQ = #{sj} </if>
+        <if test="yljgid != null"> AND t.YLJGID = #{yljgid} </if>
+        ORDER BY t.UPDATE_TIME DESC
+    </select>
+    <select id="getIndexList" resultType="com.shdata.health.carezy.forms.vo.FormsIndexVo">
+        SELECT * FROM T_HL_YW_HLJLWSSYB t
+        WHERE t.del_flag = '0'
+        <if test="id != null and id != ''">
+            AND t.ID = #{id}
+        </if>
+        <if test="bridList != null and bridList.size() > 0">
+            AND t.BRID IN
+            <foreach item="brid" collection="bridList" open="(" separator="," close=")">
+                #{brid}
+            </foreach>
+        </if>
+        <if test="wsbm != null">
+            AND t.WSBM = #{wsbm}
+        </if>
+        <if test="sj != null">
+            AND t.RQ = #{sj}
+        </if>
+        <if test="yljgid != null">
+            AND t.YLJGID = #{yljgid}
+        </if>
+        ORDER BY t.UPDATE_TIME DESC
+    </select>
+    <select id="getVitalSignsOfIndex" resultType="com.shdata.health.carezy.forms.vo.FormsIndexVo">
+        SELECT * FROM T_HL_YW_HLJLWSSYB t
+        where t.del_flag='0'
+        AND TRUNC(t.RQ) BETWEEN #{startTime} AND #{endTime}
+<!--        <if test="startTime != null and startTime != '' and endTime != null and endTime != ''">-->
+<!--            AND TRUNC(t.RQ) BETWEEN #{startTime} AND #{endTime}-->
+<!--        </if>-->
+        <if test="brid!='' and brid!=null"> AND t.BRID = #{brid} </if>
+        <if test="wsfl!='' and wsfl!=null"> AND t.WSFL = #{wsfl} </if>
+        <if test="wsid!='' and wsid!=null"> AND t.WSID = #{wsid} </if>
+        <if test="wsbm!='' and wsbm!=null"> AND t.WSBM = #{wsbm} </if>
+        <if test="yljgid!='' and yljgid!=null"> AND t.YLJGID = #{yljgid} </if>
+        ORDER BY  t.UPDATE_TIME DESC
+    </select>
+    <select id="getIndexFormList" resultType="com.shdata.health.carezy.forms.vo.FormsIndexVo">
+        SELECT * FROM T_HL_YW_HLJLWSSYB t
+        where t.del_flag='0'
+        <if test="brid!='' and brid!=null">AND t.BRID = #{brid}</if>
+        <if test="wsid!='' and wsid!=null">AND t.WSID = #{wsid}</if>
+        <if test="rq!=null">AND t.RQ = #{rq}</if>
+        <if test="wsbm!='' and wsbm!=null">AND t.WSBM = #{wsbm}</if>
+        <if test="wsfl!='' and wsfl!=null">AND t.WSFL = #{wsfl}</if>
+        <if test="yljgid!='' and yljgid!=null">AND t.YLJGID = #{yljgid}</if>
+        ORDER BY t.UPDATE_TIME DESC
+    </select>
+    <select id="getNurse" resultType="com.shdata.health.carezy.forms.vo.NurseVo">
+        SELECT t.BQHSZ, t.BQFHSZ  FROM T_HL_DIC_BQKZB t where  t.del_flag = '0' and t.BQID = #{bqid}
+    </select>
+    <select id="findById" resultType="com.shdata.health.carezy.forms.entity.FormsIndex">
+        SELECT * FROM T_HL_YW_HLJLWSSYB t
+        where t.del_flag='0' AND t.ID = #{id}
+    </select>
+    <select id="getRiskList" resultType="com.shdata.health.carezy.forms.vo.RiskListVo">
+        SELECT T1.FXDJ as fxdj, T1.RQ AS time, T1.ZF AS score, T1.JL as conclusion, T1.QMYSID AS assessorId, T1.ID as id, T1.JKZT as jkzt,T1.WSFL as wsfl,T1.WSBM as wsbm, T1.WSID as wsid FROM T_HL_YW_HLJLWSSYB T1 INNER JOIN T_HL_YW_BRDJXX T2 ON T2.ID = T1.BRID  WHERE T1.DEL_FLAG = '0' AND T2.DEL_FLAG = '0'
+        <if test="brid!='' and brid!=null">AND T1.BRID = #{brid}</if>
+        <if test="wsfl!='' and wsfl!=null">AND T1.WSFL = #{wsfl}</if>
+        <if test="yljgid!='' and yljgid!=null">AND T1.YLJGID = #{yljgid}</if>
+    </select>
+    <select id="getIndexFormListByBridBatch" resultType="com.shdata.health.carezy.forms.vo.FormsIndexVoo">
+        SELECT *
+        FROM T_HL_YW_HLJLWSSYB t
+        WHERE t.DEL_FLAG = '0'
+        <if test="bridSet != null and bridSet.size() > 0">
+            AND t.BRID IN
+            <foreach item="brid" collection="bridSet" open="(" separator="," close=")">
+                #{brid}
+            </foreach>
+        </if>
+        <if test="sj != null">
+            AND t.RQ = #{sj}
+        </if>
+        <if test="wsbm != null and wsbm!=''">
+            AND t.WSBM = #{wsbm}
+        </if>
+        <if test="yljgid != null and yljgid!=''">
+            AND t.YLJGID = #{yljgid}
+        </if>
+        ORDER BY t.UPDATE_TIME DESC
+    </select>
+    <select id="careSafetyQuery" resultType="com.shdata.health.carezy.whiteBoard.vo.CareSafetyVo">
+        SELECT t1.BQID, t1.BCH, t2.WSID, t2.FXFSLB,t2.DGLX FROM T_HL_YW_BRDJXX t1 INNER JOIN T_HL_YW_HLJLWSSYB t2 ON t1.ID = T2.BRID
+        WHERE t1.DEL_FLAG = '0' AND t2.DEL_FLAG = '0'
+        <if test = "yljgid!='' and yljgid!=null">AND t2.YLJGID = #{yljgid} </if>
+<!--        <if test = "rq!='' and rq!=null">AND t2.RQ = #{rq} </if>-->
+        <if test="wardIds != null and wardIds.size() > 0">
+            AND t1.BQID IN
+            <foreach item="bqid" collection="wardIds" open="(" separator="," close=")">
+                #{bqid}
+            </foreach>
+        </if>
+    </select>
+    <select id="pressureInjuriesQuery" resultType="com.shdata.health.carezy.whiteBoard.vo.PressureInjuriesVo">
+        SELECT t1.BQID, t1.BCH, t2.UPDATE_TIME FROM T_HL_YW_BRDJXX t1 INNER JOIN T_HL_YW_HLJLWSSYB t2 ON t1.ID = T2.BRID
+        WHERE t1.DEL_FLAG = '0' AND t2.DEL_FLAG = '0'
+        AND TRUNC(t2.RQ) = #{rq}
+        <if test = "yljgid!='' and yljgid!=null">AND t2.YLJGID = #{yljgid} </if>
+        <if test = "wsbm!='' and wsbm!=null">AND t2.WSBM = #{wsbm} </if>
+        <if test="wardIds != null and wardIds.size() > 0">
+            AND t1.BQID IN
+            <foreach item="bqid" collection="wardIds" open="(" separator="," close=")">
+                #{bqid}
+            </foreach>
+        </if>
+        order by t2.UPDATE_TIME desc
+    </select>
+    <select id="getRiskFormList" resultType="java.lang.String">
+        select distinct t.WSID from T_HL_YW_HLJLWSSYB t inner join T_HL_YW_BRDJXX b on t.BRID = b.ID
+                                                        inner join T_HL_DIC_HLJLWS s on s.id = t.WSID
+        where b.HZZT like concat('%',#{patientStatus},'%') and s.FLDM = '2'
+    </select>
+    <select id="singleDuctStatistics"
+            resultType="com.shdata.health.carezy.patientmanage.vo.RegistInformationVo">
+        SELECT
+        *
+        FROM
+        T_HL_YW_BRDJXX t
+        INNER JOIN
+        (
+        SELECT * FROM T_HL_YW_HLJLWSSYB b INNER JOIN
+        (
+        SELECT
+        b.brid AS bch_id,
+        MAX(b.rq) AS max_rq
+        FROM
+        T_HL_YW_HLJLWSSYB b
+        WHERE
+        b.del_flag = '0'
+        AND b.DGLX = #{dglx}
+        AND b.WSFL = #{wsfl}
+        AND b.BGSJ IS NULL
+        GROUP BY
+        b.brid
+        )sub_b ON b.BRID = sub_b.bch_id AND b.RQ = sub_b.max_rq
+        ) sub_c ON t.ID = sub_c.BCH_ID
+        WHERE
+        t.del_flag = '0'
+        AND t.rycyzt = '1'
+        <if test="wardIds != null and wardIds.size() > 0">
+            AND t.bqid IN
+            <foreach collection="wardIds" item="item" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+        AND t.yljgid=#{yljgid}
+    </select>
+    <select id="getDoDuct" resultType="com.shdata.health.carezy.forms.vo.FormsIndexVo">
+        SELECT * FROM T_HL_YW_HLJLWSSYB t  WHERE t.DEL_FLAG = '0' AND t.WSFL = '9' AND t.BGSJ IS NULL
+        <if test = "yljgid!='' and yljgid!=null">AND t.YLJGID = #{yljgid} </if>
+        <if test="brid!='' and brid!=null">AND t.BRID = #{brid}</if>
+        <if test="wsfl!='' and wsfl!=null">AND t.WSFL = #{wsfl}</if>
+
+    </select>
+    <select id="getAllIndex" resultType="com.shdata.health.carezy.forms.vo.FormsIndexVo">
+        SELECT * FROM T_HL_YW_HLJLWSSYB t  WHERE t.DEL_FLAG = '0' AND t.BRID = #{brid}
+        <if test="ids != null and ids.size() > 0">
+            AND t.WSID IN
+            <foreach collection="ids" item="item" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+        </if>
+        <if test = "organId!='' and organId!=null">AND t.YLJGID = #{organId} </if>
+
+    </select>
+    <select id="getDoForm" resultType="com.shdata.health.carezy.forms.vo.DoFormsVo">
+        SELECT distinct t.WSID as wsid, b.MC as wsmc FROM T_HL_YW_HLJLWSSYB t inner join T_HL_DIC_HLJLWS b on t.WSID = b.ID
+        where t.del_flag='0' and b.del_flag='0'
+        <if test="brid!='' and brid!=null"> AND t.BRID = #{brid} </if>
+        <if test="yljgid!='' and yljgid!=null"> AND t.YLJGID = #{yljgid} </if>
+    </select>
+
+
+</mapper>

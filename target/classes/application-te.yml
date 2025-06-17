@@ -1,0 +1,28 @@
+# 数据源配置
+spring:
+  datasource:
+    driverClassName: dm.jdbc.driver.DmDriver
+    url: jdbc:dm://172.20.105.193:9001
+    username: U_HLYTH_ZY
+    password: shdata_u_hlyth_zy
+
+  data:
+    redis:
+      host: redis.shdata.me
+      password: shdata9001
+      port: 9001
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://www.shdata.me/registry-admin/eureka
+
+logging:
+  file:
+    path: /HC_logs/carezy/
+  level:
+    root: ERROR
+    com.shdata.health.common.service.PrintService: INFO
+    com.shdata.health.carezy.sys.service.AssessmentService: INFO
