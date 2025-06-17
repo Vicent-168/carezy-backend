@@ -1,0 +1,1305 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>picc护理记录单</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/picc护理记录单/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.2.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/picc护理记录单/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5298" class="ax_default box_1">
+        <div id="u5298_div" class=""></div>
+        <div id="u5298_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (记录单表头功能按钮) -->
+
+      <!-- Unnamed (表格) -->
+      <div id="u5300" class="ax_default">
+
+        <!-- Unnamed (单元格) -->
+        <div id="u5301" class="ax_default table_cell">
+          <img id="u5301_img" class="img " src="images/通用护理记录单/u1565.png"/>
+          <div id="u5301_text" class="text ">
+            <p><span>打印记录</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u5302" class="ax_default table_cell">
+          <img id="u5302_img" class="img " src="images/通用护理记录单/u1565.png"/>
+          <div id="u5302_text" class="text ">
+            <p><span>预览</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单元格) -->
+        <div id="u5303" class="ax_default table_cell">
+          <img id="u5303_img" class="img " src="images/通用护理记录单/u1567.png"/>
+          <div id="u5303_text" class="text ">
+            <p><span>保存</span></p>
+          </div>
+        </div>
+      </div>
+      <div id="u5299" style="display:none; visibility:hidden;"></div>
+
+      <!-- Unnamed (线段) -->
+      <div id="u5304" class="ax_default line">
+        <img id="u5304_img" class="img " src="images/门诊患者管理/u89.svg"/>
+        <div id="u5304_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5305" class="ax_default _文本段落">
+        <div id="u5305_div" class=""></div>
+        <div id="u5305_text" class="text ">
+          <p><span>护理记录单</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (记录单表头-在线) -->
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5307" class="ax_default _一级标题">
+        <div id="u5307_div" class=""></div>
+        <div id="u5307_text" class="text ">
+          <p style="font-size:14px;"><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;">姓名</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;">：张珊</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;font-size:13px;">&nbsp; &nbsp; &nbsp; &nbsp; 年龄：</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;font-size:13px;">56岁&nbsp;&nbsp; </span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;font-size:13px;">&nbsp; &nbsp; 性别：</span><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;font-size:13px;">女&nbsp; </span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;font-size:13px;"> </span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5308" class="ax_default _文本段落">
+        <div id="u5308_div" class=""></div>
+        <div id="u5308_text" class="text ">
+          <p><span>picc护理记录单</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (线段) -->
+      <div id="u5309" class="ax_default line">
+        <img id="u5309_img" class="img " src="images/需求评估/u464.svg"/>
+        <div id="u5309_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5310" class="ax_default _文本段落">
+        <div id="u5310_div" class=""></div>
+        <div id="u5310_text" class="text ">
+          <p><span>xxx卫生服务中心</span></p>
+        </div>
+      </div>
+      <div id="u5306" style="display:none; visibility:hidden;"></div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5311" class="ax_default box_1">
+        <div id="u5311_div" class=""></div>
+        <div id="u5311_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5312" class="ax_default label">
+        <div id="u5312_div" class=""></div>
+        <div id="u5312_text" class="text ">
+          <p><span>置管部位</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5313" class="ax_default label">
+        <div id="u5313_div" class=""></div>
+        <div id="u5313_text" class="text ">
+          <p><span>导管型号</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5314" class="ax_default label">
+        <div id="u5314_div" class=""></div>
+        <div id="u5314_text" class="text ">
+          <p><span>置管日期</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u5315" class="ax_default text_field">
+        <div id="u5315_div" class=""></div>
+        <input id="u5315_input" type="text" value="" class="u5315_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5316" class="ax_default label">
+        <div id="u5316_div" class=""></div>
+        <div id="u5316_text" class="text ">
+          <p><span>&nbsp;外露长度</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u5317" class="ax_default text_field">
+        <div id="u5317_div" class=""></div>
+        <input id="u5317_input" type="text" value="" class="u5317_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5318" class="ax_default label">
+        <div id="u5318_div" class=""></div>
+        <div id="u5318_text" class="text ">
+          <p><span>1.冲管</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5319" class="ax_default box_1">
+        <div id="u5319_div" class=""></div>
+        <div id="u5319_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5320" class="ax_default label">
+        <div id="u5320_div" class=""></div>
+        <div id="u5320_text" class="text ">
+          <p><span>冲管量([ml)</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5321" class="ax_default label">
+        <div id="u5321_div" class=""></div>
+        <div id="u5321_text" class="text ">
+          <p><span>冲管方式</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5322" class="ax_default label">
+        <div id="u5322_div" class=""></div>
+        <div id="u5322_text" class="text ">
+          <p><span>冲管液</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u5323" class="ax_default text_field">
+        <div id="u5323_div" class=""></div>
+        <input id="u5323_input" type="text" value="" class="u5323_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5324" class="ax_default _文本段落">
+        <div id="u5324_div" class=""></div>
+        <div id="u5324_text" class="text ">
+          <p><span>一、PICC 置管信息</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (记录单上传图片) -->
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5326" class="ax_default _文本段落">
+        <div id="u5326_div" class=""></div>
+        <div id="u5326_text" class="text ">
+          <p><span>图片</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5327" class="ax_default box_2">
+        <div id="u5327_div" class=""></div>
+        <div id="u5327_text" class="text ">
+          <p><span>+</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (图片 ) -->
+      <div id="u5328" class="ax_default _图片_">
+        <img id="u5328_img" class="img " src="images/通用护理记录单/u1560.svg"/>
+        <div id="u5328_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (占位符) -->
+      <div id="u5329" class="ax_default placeholder">
+        <img id="u5329_img" class="img " src="images/通用护理记录单/u1561.svg"/>
+        <div id="u5329_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (线段) -->
+      <div id="u5330" class="ax_default line">
+        <img id="u5330_img" class="img " src="images/通用护理记录单/u1562.svg"/>
+        <div id="u5330_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+      <div id="u5325" style="display:none; visibility:hidden;"></div>
+
+      <!-- Unnamed (店铺后台导航) -->
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5332" class="ax_default box_2">
+        <div id="u5332_div" class=""></div>
+        <div id="u5332_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5333" class="ax_default box_2">
+        <div id="u5333_div" class=""></div>
+        <div id="u5333_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5334" class="ax_default _三级标题">
+        <div id="u5334_div" class=""></div>
+        <div id="u5334_text" class="text ">
+          <p><span>数字化护理中心管理系统</span></p>
+        </div>
+      </div>
+
+      <!-- 登录者 (组合) -->
+      <div id="u5335" class="ax_default" data-label="登录者" data-left="1041" data-top="29" data-width="104" data-height="16">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5336" class="ax_default label">
+          <div id="u5336_div" class=""></div>
+          <div id="u5336_text" class="text ">
+            <p><span>张天成&nbsp; 护士</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (形状) -->
+        <div id="u5337" class="ax_default _形状">
+          <img id="u5337_img" class="img " src="images/首页/u53.svg"/>
+          <div id="u5337_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u5338" class="ax_default icon">
+        <img id="u5338_img" class="img " src="images/首页/u54.svg"/>
+        <div id="u5338_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u5339" class="ax_default ax_default_hidden" style="display:none; visibility: hidden" data-left="13" data-top="332" data-width="83" data-height="118">
+
+        <!-- 设置 (组合) -->
+        <div id="u5340" class="ax_default" data-label="设置" data-left="13" data-top="366" data-width="83" data-height="84">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u5341" class="ax_default label">
+            <div id="u5341_div" class=""></div>
+            <div id="u5341_text" class="text ">
+              <p><span>权限</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u5342" class="ax_default icon">
+            <img id="u5342_img" class="img " src="images/首页/u58.svg"/>
+            <div id="u5342_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u5343" class="ax_default label">
+            <div id="u5343_div" class=""></div>
+            <div id="u5343_text" class="text ">
+              <p><span>字典</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u5344" class="ax_default icon">
+            <img id="u5344_img" class="img " src="images/首页/u60.svg"/>
+            <div id="u5344_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u5345" class="ax_default label">
+            <div id="u5345_div" class=""></div>
+            <div id="u5345_text" class="text ">
+              <p><span>人员管理</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u5346" class="ax_default icon">
+            <img id="u5346_img" class="img " src="images/首页/u62.svg"/>
+            <div id="u5346_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (组合) -->
+        <div id="u5347" class="ax_default" data-left="13" data-top="332" data-width="55" data-height="19">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u5348" class="ax_default label">
+            <div id="u5348_div" class=""></div>
+            <div id="u5348_text" class="text ">
+              <p><span>设置</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u5349" class="ax_default icon">
+            <img id="u5349_img" class="img " src="images/首页/u65.svg"/>
+            <div id="u5349_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 下拉框 (组合) -->
+      <div id="u5350" class="ax_default ax_default_hidden" data-label="下拉框" style="display:none; visibility: hidden" data-left="1013" data-top="59" data-width="188" data-height="111">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5351" class="ax_default box_1">
+          <img id="u5351_img" class="img " src="images/首页/u67.svg"/>
+          <div id="u5351_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5352" class="ax_default label">
+          <div id="u5352_div" class=""></div>
+          <div id="u5352_text" class="text ">
+            <p><span>修改密码</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5353" class="ax_default label">
+          <div id="u5353_div" class=""></div>
+          <div id="u5353_text" class="text ">
+            <p><span>退出登录</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5354" class="ax_default label">
+          <div id="u5354_div" class=""></div>
+          <div id="u5354_text" class="text ">
+            <p><span>编辑个人信息</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u5355" class="ax_default" data-left="975" data-top="15" data-width="41" data-height="30">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5356" class="ax_default label">
+          <div id="u5356_div" class=""></div>
+          <div id="u5356_text" class="text ">
+            <p><span>消息 &gt;</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5357" class="ax_default label">
+          <div id="u5357_div" class=""></div>
+          <div id="u5357_text" class="text ">
+            <p><span>23</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (树) -->
+      <div id="u5358" class="ax_default tree_node treeroot">
+        <div id="u5358_children" class="u5358_children">
+
+          <!-- Unnamed (节点) -->
+          <div id="u5359" class="ax_default tree_node treenode">
+            <!-- Unnamed (矩形) -->
+            <div id="u5360" class="" selectiongroup="u5331u5358_tree_group">
+              <div id="u5360_div" class=""></div>
+              <div id="u5360_text" class="text ">
+                <p><span>首页</span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unnamed (节点) -->
+          <div id="u5361" class="ax_default tree_node treenode">
+
+            <!-- Unnamed (图片 ) -->
+            <div id="u5362" class="ax_default _图片_">
+              <img id="u5362_img" class="img " src="images/首页/u78_selected.png"/>
+              <div id="u5362_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+            <!-- Unnamed (矩形) -->
+            <div id="u5363" class="" selectiongroup="u5331u5358_tree_group">
+              <div id="u5363_div" class=""></div>
+              <div id="u5363_text" class="text ">
+                <p><span>患者管理</span></p>
+              </div>
+            </div>
+            <div id="u5361_children" class="u5361_children">
+
+              <!-- Unnamed (节点) -->
+              <div id="u5364" class="ax_default tree_node treenode">
+                <!-- Unnamed (矩形) -->
+                <div id="u5365" class="" selectiongroup="u5331u5358_tree_group">
+                  <div id="u5365_div" class=""></div>
+                  <div id="u5365_text" class="text ">
+                    <p><span>门诊患者管理</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Unnamed (节点) -->
+              <div id="u5366" class="ax_default tree_node treenode">
+                <!-- Unnamed (矩形) -->
+                <div id="u5367" class="" selectiongroup="u5331u5358_tree_group">
+                  <div id="u5367_div" class=""></div>
+                  <div id="u5367_text" class="text ">
+                    <p><span>互联网患者管理</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unnamed (节点) -->
+          <div id="u5368" class="ax_default tree_node treenode">
+            <!-- Unnamed (矩形) -->
+            <div id="u5369" class="" selectiongroup="u5331u5358_tree_group">
+              <div id="u5369_div" class=""></div>
+              <div id="u5369_text" class="text ">
+                <p><span>评估</span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unnamed (节点) -->
+          <div id="u5370" class="ax_default tree_node treenode">
+            <!-- Unnamed (矩形) -->
+            <div id="u5371" class="" selectiongroup="u5331u5358_tree_group">
+              <div id="u5371_div" class=""></div>
+              <div id="u5371_text" class="text ">
+                <p><span>护理</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u5372" class="ax_default icon">
+        <img id="u5372_img" class="img " src="images/首页/u88.svg"/>
+        <div id="u5372_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+      <div id="u5331" style="display:none; visibility:hidden;"></div>
+
+      <!-- Unnamed (线段) -->
+      <div id="u5373" class="ax_default line">
+        <img id="u5373_img" class="img " src="images/需求评估/u471.svg"/>
+        <div id="u5373_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5374" class="ax_default box_2">
+        <div id="u5374_div" class=""></div>
+        <div id="u5374_text" class="text ">
+          <p style="font-size:13px;"><span>记录单&nbsp;&nbsp; </span><span style="font-size:16px;">x</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u5375" class="ax_default text_field">
+        <div id="u5375_div" class=""></div>
+        <input id="u5375_input" type="text" value="" class="u5375_input"/>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u5376" class="ax_default text_field">
+        <div id="u5376_div" class=""></div>
+        <input id="u5376_input" type="text" value="" class="u5376_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5377" class="ax_default label">
+        <div id="u5377_div" class=""></div>
+        <div id="u5377_text" class="text ">
+          <p><span>导管长度</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u5378" class="ax_default text_field">
+        <div id="u5378_div" class=""></div>
+        <input id="u5378_input" type="text" value="" class="u5378_input"/>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u5379" class="ax_default" data-left="220" data-top="305" data-width="314" data-height="25">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u5380" class="ax_default label">
+          <div id="u5380_div" class=""></div>
+          <div id="u5380_text" class="text ">
+            <p><span>护理日期</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (文本框) -->
+        <div id="u5381" class="ax_default text_field">
+          <div id="u5381_div" class=""></div>
+          <input id="u5381_input" type="text" value="2024.08.12" class="u5381_input"/>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5382" class="ax_default _文本段落">
+        <div id="u5382_div" class=""></div>
+        <div id="u5382_text" class="text ">
+          <p style="font-size:13px;"><span style="font-size:14px;">二、</span><span>护理操作</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5383" class="ax_default radio_button">
+        <label id="u5383_input_label" for="u5383_input" style="position: absolute; left: 0px;">
+          <img id="u5383_img" class="img " src="images/picc护理记录单/u5383.svg"/>
+          <div id="u5383_text" class="text ">
+            <p><span>生理盐水</span></p>
+          </div>
+        </label>
+        <input id="u5383_input" type="radio" value="radio" name="u5383"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5384" class="ax_default radio_button">
+        <label id="u5384_input_label" for="u5384_input" style="position: absolute; left: 0px;">
+          <img id="u5384_img" class="img " src="images/picc护理记录单/u5384.svg"/>
+          <div id="u5384_text" class="text ">
+            <p><span>肝素盐水</span></p>
+          </div>
+        </label>
+        <input id="u5384_input" type="radio" value="radio" name="u5384"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5385" class="ax_default radio_button">
+        <label id="u5385_input_label" for="u5385_input" style="position: absolute; left: 0px;">
+          <img id="u5385_img" class="img " src="images/picc护理记录单/u5385.svg"/>
+          <div id="u5385_text" class="text ">
+            <p><span>脉冲式</span></p>
+          </div>
+        </label>
+        <input id="u5385_input" type="radio" value="radio" name="u5385"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5386" class="ax_default radio_button">
+        <label id="u5386_input_label" for="u5386_input" style="position: absolute; left: 0px;">
+          <img id="u5386_img" class="img " src="images/picc护理记录单/u5386.svg"/>
+          <div id="u5386_text" class="text ">
+            <p><span>正压式</span></p>
+          </div>
+        </label>
+        <input id="u5386_input" type="radio" value="radio" name="u5386"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5387" class="ax_default label">
+        <div id="u5387_div" class=""></div>
+        <div id="u5387_text" class="text ">
+          <p><span>冲管通畅</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5388" class="ax_default radio_button">
+        <label id="u5388_input_label" for="u5388_input" style="position: absolute; left: 0px;">
+          <img id="u5388_img" class="img " src="images/picc护理记录单/u5388.svg"/>
+          <div id="u5388_text" class="text ">
+            <p><span>是</span></p>
+          </div>
+        </label>
+        <input id="u5388_input" type="radio" value="radio" name="u5388"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5389" class="ax_default radio_button">
+        <label id="u5389_input_label" for="u5389_input" style="position: absolute; left: 0px;">
+          <img id="u5389_img" class="img " src="images/picc护理记录单/u5389.svg"/>
+          <div id="u5389_text" class="text ">
+            <p><span>否</span></p>
+          </div>
+        </label>
+        <input id="u5389_input" type="radio" value="radio" name="u5389"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5390" class="ax_default label">
+        <div id="u5390_div" class=""></div>
+        <div id="u5390_text" class="text ">
+          <p><span>2. 封管</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5391" class="ax_default box_1">
+        <div id="u5391_div" class=""></div>
+        <div id="u5391_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5392" class="ax_default label">
+        <div id="u5392_div" class=""></div>
+        <div id="u5392_text" class="text ">
+          <p><span>封管量([ml)</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5393" class="ax_default label">
+        <div id="u5393_div" class=""></div>
+        <div id="u5393_text" class="text ">
+          <p><span>封管方式</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5394" class="ax_default label">
+        <div id="u5394_div" class=""></div>
+        <div id="u5394_text" class="text ">
+          <p><span>封管液</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u5395" class="ax_default text_field">
+        <div id="u5395_div" class=""></div>
+        <input id="u5395_input" type="text" value="" class="u5395_input"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5396" class="ax_default radio_button">
+        <label id="u5396_input_label" for="u5396_input" style="position: absolute; left: 0px;">
+          <img id="u5396_img" class="img " src="images/picc护理记录单/u5396.svg"/>
+          <div id="u5396_text" class="text ">
+            <p><span>生理盐水</span></p>
+          </div>
+        </label>
+        <input id="u5396_input" type="radio" value="radio" name="u5396"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5397" class="ax_default radio_button">
+        <label id="u5397_input_label" for="u5397_input" style="position: absolute; left: 0px;">
+          <img id="u5397_img" class="img " src="images/picc护理记录单/u5397.svg"/>
+          <div id="u5397_text" class="text ">
+            <p><span>肝素盐水</span></p>
+          </div>
+        </label>
+        <input id="u5397_input" type="radio" value="radio" name="u5397"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5398" class="ax_default radio_button">
+        <label id="u5398_input_label" for="u5398_input" style="position: absolute; left: 0px;">
+          <img id="u5398_img" class="img " src="images/picc护理记录单/u5398.svg"/>
+          <div id="u5398_text" class="text ">
+            <p><span>脉冲式</span></p>
+          </div>
+        </label>
+        <input id="u5398_input" type="radio" value="radio" name="u5398"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5399" class="ax_default radio_button">
+        <label id="u5399_input_label" for="u5399_input" style="position: absolute; left: 0px;">
+          <img id="u5399_img" class="img " src="images/picc护理记录单/u5399.svg"/>
+          <div id="u5399_text" class="text ">
+            <p><span>正压式</span></p>
+          </div>
+        </label>
+        <input id="u5399_input" type="radio" value="radio" name="u5399"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5400" class="ax_default label">
+        <div id="u5400_div" class=""></div>
+        <div id="u5400_text" class="text ">
+          <p><span>3. 换药</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5401" class="ax_default box_1">
+        <div id="u5401_div" class=""></div>
+        <div id="u5401_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5402" class="ax_default label">
+        <div id="u5402_div" class=""></div>
+        <div id="u5402_text" class="text ">
+          <p><span>皮肤消毒</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5403" class="ax_default label">
+        <div id="u5403_div" class=""></div>
+        <div id="u5403_text" class="text ">
+          <p><span>有无渗血、渗液</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5404" class="ax_default label">
+        <div id="u5404_div" class=""></div>
+        <div id="u5404_text" class="text ">
+          <p><span>&nbsp;敷料</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u5405" class="ax_default text_field">
+        <div id="u5405_div" class=""></div>
+        <input id="u5405_input" type="text" value="消毒剂名称，消毒范围" class="u5405_input"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5406" class="ax_default radio_button">
+        <label id="u5406_input_label" for="u5406_input" style="position: absolute; left: 0px;">
+          <img id="u5406_img" class="img " src="images/picc护理记录单/u5406.svg"/>
+          <div id="u5406_text" class="text ">
+            <p><span>透明敷料</span></p>
+          </div>
+        </label>
+        <input id="u5406_input" type="radio" value="radio" name="u5406"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5407" class="ax_default radio_button">
+        <label id="u5407_input_label" for="u5407_input" style="position: absolute; left: 0px;">
+          <img id="u5407_img" class="img " src="images/picc护理记录单/u5407.svg"/>
+          <div id="u5407_text" class="text ">
+            <p><span>/纱布敷料</span></p>
+          </div>
+        </label>
+        <input id="u5407_input" type="radio" value="radio" name="u5407"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5408" class="ax_default radio_button">
+        <label id="u5408_input_label" for="u5408_input" style="position: absolute; left: 0px;">
+          <img id="u5408_img" class="img " src="images/picc护理记录单/u5408.svg"/>
+          <div id="u5408_text" class="text ">
+            <p><span>是</span></p>
+          </div>
+        </label>
+        <input id="u5408_input" type="radio" value="radio" name="u5408"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5409" class="ax_default radio_button">
+        <label id="u5409_input_label" for="u5409_input" style="position: absolute; left: 0px;">
+          <img id="u5409_img" class="img " src="images/picc护理记录单/u5409.svg"/>
+          <div id="u5409_text" class="text ">
+            <p><span>否</span></p>
+          </div>
+        </label>
+        <input id="u5409_input" type="radio" value="radio" name="u5409"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5410" class="ax_default label">
+        <div id="u5410_div" class=""></div>
+        <div id="u5410_text" class="text ">
+          <p><span>&nbsp;有无感染迹象</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5411" class="ax_default radio_button">
+        <label id="u5411_input_label" for="u5411_input" style="position: absolute; left: 0px;">
+          <img id="u5411_img" class="img " src="images/picc护理记录单/u5411.svg"/>
+          <div id="u5411_text" class="text ">
+            <p><span>是</span></p>
+          </div>
+        </label>
+        <input id="u5411_input" type="radio" value="radio" name="u5411"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5412" class="ax_default radio_button">
+        <label id="u5412_input_label" for="u5412_input" style="position: absolute; left: 0px;">
+          <img id="u5412_img" class="img " src="images/picc护理记录单/u5412.svg"/>
+          <div id="u5412_text" class="text ">
+            <p><span>否</span></p>
+          </div>
+        </label>
+        <input id="u5412_input" type="radio" value="radio" name="u5412"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5413" class="ax_default label">
+        <div id="u5413_div" class=""></div>
+        <div id="u5413_text" class="text ">
+          <p><span>4. 更换接头</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5414" class="ax_default box_1">
+        <div id="u5414_div" class=""></div>
+        <div id="u5414_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5415" class="ax_default label">
+        <div id="u5415_div" class=""></div>
+        <div id="u5415_text" class="text ">
+          <p><span>更换原因</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5416" class="ax_default label">
+        <div id="u5416_div" class=""></div>
+        <div id="u5416_text" class="text ">
+          <p><span>接头类型</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5417" class="ax_default radio_button">
+        <label id="u5417_input_label" for="u5417_input" style="position: absolute; left: 0px;">
+          <img id="u5417_img" class="img " src="images/picc护理记录单/u5417.svg"/>
+          <div id="u5417_text" class="text ">
+            <p><span>正压接头</span></p>
+          </div>
+        </label>
+        <input id="u5417_input" type="radio" value="radio" name="u5417"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5418" class="ax_default radio_button">
+        <label id="u5418_input_label" for="u5418_input" style="position: absolute; left: 0px;">
+          <img id="u5418_img" class="img " src="images/picc护理记录单/u5418.svg"/>
+          <div id="u5418_text" class="text ">
+            <p><span>肝素帽</span></p>
+          </div>
+        </label>
+        <input id="u5418_input" type="radio" value="radio" name="u5418"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5419" class="ax_default radio_button">
+        <label id="u5419_input_label" for="u5419_input" style="position: absolute; left: 0px;">
+          <img id="u5419_img" class="img " src="images/picc护理记录单/u5419.svg"/>
+          <div id="u5419_text" class="text ">
+            <p><span>定期更换</span></p>
+          </div>
+        </label>
+        <input id="u5419_input" type="radio" value="radio" name="u5419"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5420" class="ax_default radio_button">
+        <label id="u5420_input_label" for="u5420_input" style="position: absolute; left: 0px;">
+          <img id="u5420_img" class="img " src="images/picc护理记录单/u5420.svg"/>
+          <div id="u5420_text" class="text ">
+            <p><span>污染</span></p>
+          </div>
+        </label>
+        <input id="u5420_input" type="radio" value="radio" name="u5420"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5421" class="ax_default radio_button">
+        <label id="u5421_input_label" for="u5421_input" style="position: absolute; left: 0px;">
+          <img id="u5421_img" class="img " src="images/picc护理记录单/u5421.svg"/>
+          <div id="u5421_text" class="text ">
+            <p><span>损坏</span></p>
+          </div>
+        </label>
+        <input id="u5421_input" type="radio" value="radio" name="u5421"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5422" class="ax_default _文本段落">
+        <div id="u5422_div" class=""></div>
+        <div id="u5422_text" class="text ">
+          <p style="font-size:13px;"><span style="font-size:14px;">三、</span><span>患者情况</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5423" class="ax_default box_1">
+        <div id="u5423_div" class=""></div>
+        <div id="u5423_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5424" class="ax_default label">
+        <div id="u5424_div" class=""></div>
+        <div id="u5424_text" class="text ">
+          <p><span>体温（℃）</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u5425" class="ax_default text_field">
+        <div id="u5425_div" class=""></div>
+        <input id="u5425_input" type="text" value="" class="u5425_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5426" class="ax_default label">
+        <div id="u5426_div" class=""></div>
+        <div id="u5426_text" class="text ">
+          <p><span>脉搏（次/分）</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u5427" class="ax_default text_field">
+        <div id="u5427_div" class=""></div>
+        <input id="u5427_input" type="text" value="" class="u5427_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5428" class="ax_default label">
+        <div id="u5428_div" class=""></div>
+        <div id="u5428_text" class="text ">
+          <p><span>呼吸（次/分）</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u5429" class="ax_default text_field">
+        <div id="u5429_div" class=""></div>
+        <input id="u5429_input" type="text" value="" class="u5429_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5430" class="ax_default label">
+        <div id="u5430_div" class=""></div>
+        <div id="u5430_text" class="text ">
+          <p><span>1.生命体征</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5431" class="ax_default label">
+        <div id="u5431_div" class=""></div>
+        <div id="u5431_text" class="text ">
+          <p><span>2.</span><span>有无疼痛</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5432" class="ax_default label">
+        <div id="u5432_div" class=""></div>
+        <div id="u5432_text" class="text ">
+          <p><span>3.有无其他不适</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5433" class="ax_default label">
+        <div id="u5433_div" class=""></div>
+        <div id="u5433_text" class="text ">
+          <p><span>舒张压（mmHg）</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u5434" class="ax_default text_field">
+        <div id="u5434_div" class=""></div>
+        <input id="u5434_input" type="text" value="" class="u5434_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5435" class="ax_default label">
+        <div id="u5435_div" class=""></div>
+        <div id="u5435_text" class="text ">
+          <p><span>收缩压（mmHg）</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u5436" class="ax_default text_field">
+        <div id="u5436_div" class=""></div>
+        <input id="u5436_input" type="text" value="" class="u5436_input"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5437" class="ax_default radio_button">
+        <label id="u5437_input_label" for="u5437_input" style="position: absolute; left: 0px;">
+          <img id="u5437_img" class="img " src="images/picc护理记录单/u5437.svg"/>
+          <div id="u5437_text" class="text ">
+            <p><span>是</span></p>
+          </div>
+        </label>
+        <input id="u5437_input" type="radio" value="radio" name="u5437"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5438" class="ax_default radio_button">
+        <label id="u5438_input_label" for="u5438_input" style="position: absolute; left: 0px;">
+          <img id="u5438_img" class="img " src="images/picc护理记录单/u5438.svg"/>
+          <div id="u5438_text" class="text ">
+            <p><span>否</span></p>
+          </div>
+        </label>
+        <input id="u5438_input" type="radio" value="radio" name="u5438"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5439" class="ax_default label">
+        <div id="u5439_div" class=""></div>
+        <div id="u5439_text" class="text ">
+          <p><span>&nbsp;疼痛程度</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5440" class="ax_default radio_button">
+        <label id="u5440_input_label" for="u5440_input" style="position: absolute; left: 0px;">
+          <img id="u5440_img" class="img " src="images/picc护理记录单/u5440.svg"/>
+          <div id="u5440_text" class="text ">
+            <p><span>轻度</span></p>
+          </div>
+        </label>
+        <input id="u5440_input" type="radio" value="radio" name="u5440"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5441" class="ax_default radio_button">
+        <label id="u5441_input_label" for="u5441_input" style="position: absolute; left: 0px;">
+          <img id="u5441_img" class="img " src="images/picc护理记录单/u5441.svg"/>
+          <div id="u5441_text" class="text ">
+            <p><span>中度</span></p>
+          </div>
+        </label>
+        <input id="u5441_input" type="radio" value="radio" name="u5441"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5442" class="ax_default radio_button">
+        <label id="u5442_input_label" for="u5442_input" style="position: absolute; left: 0px;">
+          <img id="u5442_img" class="img " src="images/picc护理记录单/u5442.svg"/>
+          <div id="u5442_text" class="text ">
+            <p><span>重度</span></p>
+          </div>
+        </label>
+        <input id="u5442_input" type="radio" value="radio" name="u5442"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5443" class="ax_default label">
+        <div id="u5443_div" class=""></div>
+        <div id="u5443_text" class="text ">
+          <p><span>&nbsp;疼痛部位</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u5444" class="ax_default text_field">
+        <div id="u5444_div" class=""></div>
+        <input id="u5444_input" type="text" value="" class="u5444_input"/>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u5445" class="ax_default text_field">
+        <div id="u5445_div" class=""></div>
+        <input id="u5445_input" type="text" value="" class="u5445_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5446" class="ax_default label">
+        <div id="u5446_div" class=""></div>
+        <div id="u5446_text" class="text ">
+          <p><span>四.健康教育</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5447" class="ax_default box_1">
+        <div id="u5447_div" class=""></div>
+        <div id="u5447_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5448" class="ax_default label">
+        <div id="u5448_div" class=""></div>
+        <div id="u5448_text" class="text ">
+          <p><span>2.告知患者注意事项</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5449" class="ax_default label">
+        <div id="u5449_div" class=""></div>
+        <div id="u5449_text" class="text ">
+          <p><span>&nbsp;1.指导患者活动</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5450" class="ax_default radio_button">
+        <label id="u5450_input_label" for="u5450_input" style="position: absolute; left: 0px;">
+          <img id="u5450_img" class="img " src="images/picc护理记录单/u5450.svg"/>
+          <div id="u5450_text" class="text ">
+            <p><span>是</span></p>
+          </div>
+        </label>
+        <input id="u5450_input" type="radio" value="radio" name="u5450"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5451" class="ax_default radio_button">
+        <label id="u5451_input_label" for="u5451_input" style="position: absolute; left: 0px;">
+          <img id="u5451_img" class="img " src="images/picc护理记录单/u5451.svg"/>
+          <div id="u5451_text" class="text ">
+            <p><span>否</span></p>
+          </div>
+        </label>
+        <input id="u5451_input" type="radio" value="radio" name="u5451"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5452" class="ax_default label">
+        <div id="u5452_div" class=""></div>
+        <div id="u5452_text" class="text ">
+          <p><span>活动方式</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u5453" class="ax_default text_field">
+        <div id="u5453_div" class=""></div>
+        <input id="u5453_input" type="text" value="" class="u5453_input"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5454" class="ax_default radio_button">
+        <label id="u5454_input_label" for="u5454_input" style="position: absolute; left: 0px;">
+          <img id="u5454_img" class="img " src="images/picc护理记录单/u5454.svg"/>
+          <div id="u5454_text" class="text ">
+            <p><span>是</span></p>
+          </div>
+        </label>
+        <input id="u5454_input" type="radio" value="radio" name="u5454"/>
+      </div>
+
+      <!-- Unnamed (单选按钮) -->
+      <div id="u5455" class="ax_default radio_button">
+        <label id="u5455_input_label" for="u5455_input" style="position: absolute; left: 0px;">
+          <img id="u5455_img" class="img " src="images/picc护理记录单/u5455.svg"/>
+          <div id="u5455_text" class="text ">
+            <p><span>否</span></p>
+          </div>
+        </label>
+        <input id="u5455_input" type="radio" value="radio" name="u5455"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u5456" class="ax_default label">
+        <div id="u5456_div" class=""></div>
+        <div id="u5456_text" class="text ">
+          <p><span>&nbsp;注意事项内容</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u5457" class="ax_default text_field">
+        <div id="u5457_div" class=""></div>
+        <input id="u5457_input" type="text" value="" class="u5457_input"/>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>

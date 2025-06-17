@@ -1,0 +1,1090 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>需求评估</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/需求评估/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-3.2.1.min.js"></script>
+    <script src="resources/scripts/axure/axQuery.js"></script>
+    <script src="resources/scripts/axure/globals.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/axure/annotation.js"></script>
+    <script src="resources/scripts/axure/axQuery.std.js"></script>
+    <script src="resources/scripts/axure/doc.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+    <script src="resources/scripts/axure/events.js"></script>
+    <script src="resources/scripts/axure/recording.js"></script>
+    <script src="resources/scripts/axure/action.js"></script>
+    <script src="resources/scripts/axure/expr.js"></script>
+    <script src="resources/scripts/axure/geometry.js"></script>
+    <script src="resources/scripts/axure/flyout.js"></script>
+    <script src="resources/scripts/axure/model.js"></script>
+    <script src="resources/scripts/axure/repeater.js"></script>
+    <script src="resources/scripts/axure/sto.js"></script>
+    <script src="resources/scripts/axure/utils.temp.js"></script>
+    <script src="resources/scripts/axure/variables.js"></script>
+    <script src="resources/scripts/axure/drag.js"></script>
+    <script src="resources/scripts/axure/move.js"></script>
+    <script src="resources/scripts/axure/visibility.js"></script>
+    <script src="resources/scripts/axure/style.js"></script>
+    <script src="resources/scripts/axure/adaptive.js"></script>
+    <script src="resources/scripts/axure/tree.js"></script>
+    <script src="resources/scripts/axure/init.temp.js"></script>
+    <script src="resources/scripts/axure/legacy.js"></script>
+    <script src="resources/scripts/axure/viewer.js"></script>
+    <script src="resources/scripts/axure/math.js"></script>
+    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
+    <script src="data/document.js"></script>
+    <script src="files/需求评估/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (矩形) -->
+      <div id="u400" class="ax_default box_1">
+        <div id="u400_div" class=""></div>
+        <div id="u400_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u401" class="ax_default label">
+        <div id="u401_div" class=""></div>
+        <div id="u401_text" class="text ">
+          <p><span>*姓名</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u402" class="ax_default text_field">
+        <div id="u402_div" class=""></div>
+        <input id="u402_input" type="text" value="张珊" class="u402_input"/>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u403" class="ax_default" data-left="404" data-top="208" data-width="184" data-height="19">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u404" class="ax_default label">
+          <div id="u404_div" class=""></div>
+          <div id="u404_text" class="text ">
+            <p><span>*性别</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (单选按钮) -->
+        <div id="u405" class="ax_default radio_button selected">
+          <label id="u405_input_label" for="u405_input" style="position: absolute; left: 0px;">
+            <img id="u405_img" class="img " src="images/需求评估/u405_selected.svg"/>
+            <div id="u405_text" class="text ">
+              <p><span>男</span></p>
+            </div>
+          </label>
+          <input id="u405_input" type="radio" value="radio" name="u405" checked/>
+        </div>
+
+        <!-- Unnamed (单选按钮) -->
+        <div id="u406" class="ax_default radio_button">
+          <label id="u406_input_label" for="u406_input" style="position: absolute; left: 0px;">
+            <img id="u406_img" class="img " src="images/需求评估/u406.svg"/>
+            <div id="u406_text" class="text ">
+              <p><span>女</span></p>
+            </div>
+          </label>
+          <input id="u406_input" type="radio" value="radio" name="u406"/>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u407" class="ax_default box_2">
+        <div id="u407_div" class=""></div>
+        <div id="u407_text" class="text ">
+          <p><span>确定</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u408" class="ax_default box_2">
+        <div id="u408_div" class=""></div>
+        <div id="u408_text" class="text ">
+          <p><span>取消</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u409" class="ax_default label">
+        <div id="u409_div" class=""></div>
+        <div id="u409_text" class="text ">
+          <p><span>*出生日期</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u410" class="ax_default text_field">
+        <div id="u410_div" class=""></div>
+        <input id="u410_input" type="text" value="1967.08.12" class="u410_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u411" class="ax_default label">
+        <div id="u411_div" class=""></div>
+        <div id="u411_text" class="text ">
+          <p><span>*身份证号</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u412" class="ax_default text_field">
+        <div id="u412_div" class=""></div>
+        <input id="u412_input" type="text" value="310120196708120423" class="u412_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u413" class="ax_default label">
+        <div id="u413_div" class=""></div>
+        <div id="u413_text" class="text ">
+          <p><span>医保卡号</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u414" class="ax_default text_field">
+        <div id="u414_div" class=""></div>
+        <input id="u414_input" type="text" value="123456789012345" class="u414_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u415" class="ax_default label">
+        <div id="u415_div" class=""></div>
+        <div id="u415_text" class="text ">
+          <p><span>刷卡</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u416" class="ax_default label">
+        <div id="u416_div" class=""></div>
+        <div id="u416_text" class="text ">
+          <p style="font-size:8px;"><span style="font-size:14px;">刷卡</span><span> 下载驱动&gt;、检查联机状态</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u417" class="ax_default _文本段落">
+        <div id="u417_div" class=""></div>
+        <div id="u417_text" class="text ">
+          <p><span>病史描述</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u418" class="ax_default label">
+        <div id="u418_div" class=""></div>
+        <div id="u418_text" class="text ">
+          <p><span>*联系电话</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u419" class="ax_default text_field">
+        <div id="u419_div" class=""></div>
+        <input id="u419_input" type="text" value="139 5555 6666" class="u419_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u420" class="ax_default label">
+        <div id="u420_div" class=""></div>
+        <div id="u420_text" class="text ">
+          <p><span>基础信息</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u421" class="ax_default label">
+        <div id="u421_div" class=""></div>
+        <div id="u421_text" class="text ">
+          <p><span>就诊信息</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u422" class="ax_default label">
+        <div id="u422_div" class=""></div>
+        <div id="u422_text" class="text ">
+          <p><span>*科室</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u423" class="ax_default label">
+        <div id="u423_div" class=""></div>
+        <div id="u423_text" class="text ">
+          <p><span>*医生</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u424" class="ax_default label">
+        <div id="u424_div" class=""></div>
+        <div id="u424_text" class="text ">
+          <p><span>*门诊号</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u425" class="ax_default text_field">
+        <div id="u425_div" class=""></div>
+        <input id="u425_input" type="text" value="12345678910" class="u425_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u426" class="ax_default label">
+        <div id="u426_div" class=""></div>
+        <div id="u426_text" class="text ">
+          <p><span>*所属机构</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (下拉列表) -->
+      <div id="u427" class="ax_default droplist">
+        <div id="u427_div" class=""></div>
+        <select id="u427_input" class="u427_input">
+          <option class="u427_input_option" value="选择科室">选择科室</option>
+          <option class="u427_input_option" value="内科">内科</option>
+          <option class="u427_input_option" value="外科">外科</option>
+          <option class="u427_input_option" selected value="全科">全科</option>
+          <option class="u427_input_option" value="...">...</option>
+        </select>
+      </div>
+
+      <!-- Unnamed (下拉列表) -->
+      <div id="u428" class="ax_default droplist">
+        <div id="u428_div" class=""></div>
+        <select id="u428_input" class="u428_input">
+          <option class="u428_input_option" value="请选择医生">请选择医生</option>
+          <option class="u428_input_option" selected value="张德鹏">张德鹏</option>
+          <option class="u428_input_option" value="李锐男">李锐男</option>
+          <option class="u428_input_option" value="王德峰">王德峰</option>
+          <option class="u428_input_option" value="张一曼">张一曼</option>
+        </select>
+      </div>
+
+      <!-- Unnamed (下拉列表) -->
+      <div id="u429" class="ax_default droplist">
+        <div id="u429_div" class=""></div>
+        <select id="u429_input" class="u429_input">
+          <option class="u429_input_option" value="请选择机构">请选择机构</option>
+          <option class="u429_input_option" selected value="xxx卫生服务中心">xxx卫生服务中心</option>
+          <option class="u429_input_option" value="yyy卫生服务中">yyy卫生服务中</option>
+          <option class="u429_input_option" value=".....">.....</option>
+        </select>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u430" class="ax_default" data-left="184" data-top="668" data-width="924" data-height="60">
+
+        <!-- Unnamed (表格) -->
+        <div id="u431" class="ax_default">
+
+          <!-- Unnamed (单元格) -->
+          <div id="u432" class="ax_default table_cell">
+            <img id="u432_img" class="img " src="images/需求评估/u432.png"/>
+            <div id="u432_text" class="text ">
+              <p><span>护理项目</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (单元格) -->
+          <div id="u433" class="ax_default table_cell">
+            <img id="u433_img" class="img " src="images/需求评估/u432.png"/>
+            <div id="u433_text" class="text ">
+              <p><span>次数</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (单元格) -->
+          <div id="u434" class="ax_default table_cell">
+            <img id="u434_img" class="img " src="images/需求评估/u432.png"/>
+            <div id="u434_text" class="text ">
+              <p><span>频次</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (单元格) -->
+          <div id="u435" class="ax_default table_cell">
+            <img id="u435_img" class="img " src="images/需求评估/u435.png"/>
+            <div id="u435_text" class="text ">
+              <p><span>金额（元）</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (单元格) -->
+          <div id="u436" class="ax_default table_cell">
+            <img id="u436_img" class="img " src="images/需求评估/u436.png"/>
+            <div id="u436_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (单元格) -->
+          <div id="u437" class="ax_default table_cell">
+            <img id="u437_img" class="img " src="images/需求评估/u437.png"/>
+            <div id="u437_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (单元格) -->
+          <div id="u438" class="ax_default table_cell">
+            <img id="u438_img" class="img " src="images/需求评估/u437.png"/>
+            <div id="u438_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (单元格) -->
+          <div id="u439" class="ax_default table_cell">
+            <img id="u439_img" class="img " src="images/需求评估/u437.png"/>
+            <div id="u439_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (单元格) -->
+          <div id="u440" class="ax_default table_cell">
+            <img id="u440_img" class="img " src="images/需求评估/u440.png"/>
+            <div id="u440_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (单元格) -->
+          <div id="u441" class="ax_default table_cell">
+            <img id="u441_img" class="img " src="images/需求评估/u441.png"/>
+            <div id="u441_text" class="text ">
+              <p><span>-</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (下拉列表) -->
+        <div id="u442" class="ax_default droplist">
+          <div id="u442_div" class=""></div>
+          <select id="u442_input" class="u442_input">
+            <option class="u442_input_option" value="选择项目（支持模糊搜索）">选择项目（支持模糊搜索）</option>
+            <option class="u442_input_option" value="专科护理">专科护理</option>
+            <option class="u442_input_option" value="急性造口护理">急性造口护理</option>
+            <option class="u442_input_option" value="慢性造口护理">慢性造口护理</option>
+            <option class="u442_input_option" value="普通造口护理">普通造口护理</option>
+            <option class="u442_input_option" value="picc护理">picc护理</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u443" class="ax_default label">
+        <div id="u443_div" class=""></div>
+        <div id="u443_text" class="text ">
+          <p><span>所需护理项目</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u444" class="ax_default label">
+        <div id="u444_div" class=""></div>
+        <div id="u444_text" class="text ">
+          <p><span>专病护理服务</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本域) -->
+      <div id="u445" class="ax_default text_area">
+        <div id="u445_div" class=""></div>
+        <textarea id="u445_input" class="u445_input">请输入...</textarea>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u446" class="ax_default _文本段落">
+        <div id="u446_div" class=""></div>
+        <div id="u446_text" class="text ">
+          <p><span>体征信息</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u447" class="ax_default label">
+        <div id="u447_div" class=""></div>
+        <div id="u447_text" class="text ">
+          <p><span>身高（cm）</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u448" class="ax_default text_field">
+        <div id="u448_div" class=""></div>
+        <input id="u448_input" type="text" value="178" class="u448_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u449" class="ax_default label">
+        <div id="u449_div" class=""></div>
+        <div id="u449_text" class="text ">
+          <p><span>体重(kg)</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u450" class="ax_default text_field">
+        <div id="u450_div" class=""></div>
+        <input id="u450_input" type="text" value="" class="u450_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u451" class="ax_default label">
+        <div id="u451_div" class=""></div>
+        <div id="u451_text" class="text ">
+          <p><span>收缩压（mmHg）</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u452" class="ax_default text_field">
+        <div id="u452_div" class=""></div>
+        <input id="u452_input" type="text" value="" class="u452_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u453" class="ax_default label">
+        <div id="u453_div" class=""></div>
+        <div id="u453_text" class="text ">
+          <p><span>舒张压（mmHg）</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u454" class="ax_default text_field">
+        <div id="u454_div" class=""></div>
+        <input id="u454_input" type="text" value="" class="u454_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u455" class="ax_default label">
+        <div id="u455_div" class=""></div>
+        <div id="u455_text" class="text ">
+          <p><span>血糖（mmol/L）</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u456" class="ax_default text_field">
+        <div id="u456_div" class=""></div>
+        <input id="u456_input" type="text" value="" class="u456_input"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u457" class="ax_default _文本段落">
+        <div id="u457_div" class=""></div>
+        <div id="u457_text" class="text ">
+          <p><span>护理需求描述</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本域) -->
+      <div id="u458" class="ax_default text_area">
+        <div id="u458_div" class=""></div>
+        <textarea id="u458_input" class="u458_input">请输入患者护理需求...</textarea>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u459" class="ax_default label">
+        <div id="u459_div" class=""></div>
+        <div id="u459_text" class="text ">
+          <p><span>健康管理服务</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (复选框) -->
+      <div id="u460" class="ax_default checkbox">
+        <label id="u460_input_label" for="u460_input" style="position: absolute; left: 0px;">
+          <img id="u460_img" class="img " src="images/需求评估/u460.svg"/>
+          <div id="u460_text" class="text ">
+            <p><span>家庭医生签约</span></p>
+          </div>
+        </label>
+        <input id="u460_input" type="checkbox" value="checkbox"/>
+      </div>
+
+      <!-- Unnamed (复选框) -->
+      <div id="u461" class="ax_default checkbox">
+        <label id="u461_input_label" for="u461_input" style="position: absolute; left: 0px;">
+          <img id="u461_img" class="img " src="images/需求评估/u461.svg"/>
+          <div id="u461_text" class="text ">
+            <p><span>慢病建卡</span></p>
+          </div>
+        </label>
+        <input id="u461_input" type="checkbox" value="checkbox"/>
+      </div>
+
+      <!-- Unnamed (复选框) -->
+      <div id="u462" class="ax_default checkbox">
+        <label id="u462_input_label" for="u462_input" style="position: absolute; left: 0px;">
+          <img id="u462_img" class="img " src="images/需求评估/u462.svg"/>
+          <div id="u462_text" class="text ">
+            <p><span>转诊</span></p>
+          </div>
+        </label>
+        <input id="u462_input" type="checkbox" value="checkbox"/>
+      </div>
+
+      <!-- Unnamed (复选框) -->
+      <div id="u463" class="ax_default checkbox">
+        <label id="u463_input_label" for="u463_input" style="position: absolute; left: 0px;">
+          <img id="u463_img" class="img " src="images/需求评估/u463.svg"/>
+          <div id="u463_text" class="text ">
+            <p><span>咨询家庭医生</span></p>
+          </div>
+        </label>
+        <input id="u463_input" type="checkbox" value="checkbox"/>
+      </div>
+
+      <!-- Unnamed (线段) -->
+      <div id="u464" class="ax_default line">
+        <img id="u464_img" class="img " src="images/需求评估/u464.svg"/>
+        <div id="u464_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (线段) -->
+      <div id="u465" class="ax_default line">
+        <img id="u465_img" class="img " src="images/需求评估/u464.svg"/>
+        <div id="u465_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u466" class="ax_default label">
+        <div id="u466_div" class=""></div>
+        <div id="u466_text" class="text ">
+          <p><span>基础信息</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (线段) -->
+      <div id="u467" class="ax_default line">
+        <img id="u467_img" class="img " src="images/需求评估/u464.svg"/>
+        <div id="u467_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u468" class="ax_default label">
+        <div id="u468_div" class=""></div>
+        <div id="u468_text" class="text ">
+          <p><span>评估信息</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (垂直线) -->
+      <div id="u469" class="ax_default line">
+        <img id="u469_img" class="img " src="images/需求评估/u469.svg"/>
+        <div id="u469_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (垂直线) -->
+      <div id="u470" class="ax_default line">
+        <img id="u470_img" class="img " src="images/需求评估/u470.svg"/>
+        <div id="u470_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (线段) -->
+      <div id="u471" class="ax_default line">
+        <img id="u471_img" class="img " src="images/需求评估/u471.svg"/>
+        <div id="u471_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u472" class="ax_default box_2">
+        <div id="u472_div" class=""></div>
+        <div id="u472_text" class="text ">
+          <p style="font-size:13px;"><span>需求评估&nbsp;&nbsp; </span><span style="font-size:16px;">x</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u473" class="ax_default label">
+        <div id="u473_div" class=""></div>
+        <div id="u473_text" class="text ">
+          <p><span style="font-family:'Arial Negreta', 'Arial Normal', 'Arial', sans-serif;font-weight:700;color:#00BFBF;">护理要求</span><span style="font-family:'Arial Normal', 'Arial', sans-serif;font-weight:400;color:#AAAAAA;">（建议）</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (线段) -->
+      <div id="u474" class="ax_default line">
+        <img id="u474_img" class="img " src="images/需求评估/u464.svg"/>
+        <div id="u474_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u475" class="ax_default label">
+        <div id="u475_div" class=""></div>
+        <div id="u475_text" class="text ">
+          <p><span>其他</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (店铺后台导航) -->
+
+      <!-- Unnamed (矩形) -->
+      <div id="u477" class="ax_default box_2">
+        <div id="u477_div" class=""></div>
+        <div id="u477_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u478" class="ax_default box_2">
+        <div id="u478_div" class=""></div>
+        <div id="u478_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u479" class="ax_default _三级标题">
+        <div id="u479_div" class=""></div>
+        <div id="u479_text" class="text ">
+          <p><span>数字化护理中心管理系统</span></p>
+        </div>
+      </div>
+
+      <!-- 登录者 (组合) -->
+      <div id="u480" class="ax_default" data-label="登录者" data-left="1041" data-top="30" data-width="104" data-height="16">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u481" class="ax_default label">
+          <div id="u481_div" class=""></div>
+          <div id="u481_text" class="text ">
+            <p><span>张天成&nbsp; 护士</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (形状) -->
+        <div id="u482" class="ax_default _形状">
+          <img id="u482_img" class="img " src="images/首页/u53.svg"/>
+          <div id="u482_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u483" class="ax_default icon">
+        <img id="u483_img" class="img " src="images/首页/u54.svg"/>
+        <div id="u483_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u484" class="ax_default ax_default_hidden" style="display:none; visibility: hidden" data-left="13" data-top="333" data-width="83" data-height="118">
+
+        <!-- 设置 (组合) -->
+        <div id="u485" class="ax_default" data-label="设置" data-left="13" data-top="367" data-width="83" data-height="84">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u486" class="ax_default label">
+            <div id="u486_div" class=""></div>
+            <div id="u486_text" class="text ">
+              <p><span>权限</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u487" class="ax_default icon">
+            <img id="u487_img" class="img " src="images/首页/u58.svg"/>
+            <div id="u487_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u488" class="ax_default label">
+            <div id="u488_div" class=""></div>
+            <div id="u488_text" class="text ">
+              <p><span>字典</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u489" class="ax_default icon">
+            <img id="u489_img" class="img " src="images/首页/u60.svg"/>
+            <div id="u489_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (矩形) -->
+          <div id="u490" class="ax_default label">
+            <div id="u490_div" class=""></div>
+            <div id="u490_text" class="text ">
+              <p><span>人员管理</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u491" class="ax_default icon">
+            <img id="u491_img" class="img " src="images/首页/u62.svg"/>
+            <div id="u491_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unnamed (组合) -->
+        <div id="u492" class="ax_default" data-left="13" data-top="333" data-width="55" data-height="19">
+
+          <!-- Unnamed (矩形) -->
+          <div id="u493" class="ax_default label">
+            <div id="u493_div" class=""></div>
+            <div id="u493_text" class="text ">
+              <p><span>设置</span></p>
+            </div>
+          </div>
+
+          <!-- Unnamed (形状) -->
+          <div id="u494" class="ax_default icon">
+            <img id="u494_img" class="img " src="images/首页/u65.svg"/>
+            <div id="u494_text" class="text " style="display:none; visibility: hidden">
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 下拉框 (组合) -->
+      <div id="u495" class="ax_default ax_default_hidden" data-label="下拉框" style="display:none; visibility: hidden" data-left="1013" data-top="60" data-width="188" data-height="111">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u496" class="ax_default box_1">
+          <img id="u496_img" class="img " src="images/首页/u67.svg"/>
+          <div id="u496_text" class="text " style="display:none; visibility: hidden">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u497" class="ax_default label">
+          <div id="u497_div" class=""></div>
+          <div id="u497_text" class="text ">
+            <p><span>修改密码</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u498" class="ax_default label">
+          <div id="u498_div" class=""></div>
+          <div id="u498_text" class="text ">
+            <p><span>退出登录</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u499" class="ax_default label">
+          <div id="u499_div" class=""></div>
+          <div id="u499_text" class="text ">
+            <p><span>编辑个人信息</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (组合) -->
+      <div id="u500" class="ax_default" data-left="975" data-top="16" data-width="41" data-height="30">
+
+        <!-- Unnamed (矩形) -->
+        <div id="u501" class="ax_default label">
+          <div id="u501_div" class=""></div>
+          <div id="u501_text" class="text ">
+            <p><span>消息 &gt;</span></p>
+          </div>
+        </div>
+
+        <!-- Unnamed (矩形) -->
+        <div id="u502" class="ax_default label">
+          <div id="u502_div" class=""></div>
+          <div id="u502_text" class="text ">
+            <p><span>23</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (树) -->
+      <div id="u503" class="ax_default tree_node treeroot">
+        <div id="u503_children" class="u503_children">
+
+          <!-- Unnamed (节点) -->
+          <div id="u504" class="ax_default tree_node treenode">
+            <!-- Unnamed (矩形) -->
+            <div id="u505" class="" selectiongroup="u476u503_tree_group">
+              <div id="u505_div" class=""></div>
+              <div id="u505_text" class="text ">
+                <p><span>首页</span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unnamed (节点) -->
+          <div id="u506" class="ax_default tree_node treenode">
+
+            <!-- Unnamed (图片 ) -->
+            <div id="u507" class="ax_default _图片_">
+              <img id="u507_img" class="img " src="images/首页/u78_selected.png"/>
+              <div id="u507_text" class="text " style="display:none; visibility: hidden">
+                <p></p>
+              </div>
+            </div>
+            <!-- Unnamed (矩形) -->
+            <div id="u508" class="" selectiongroup="u476u503_tree_group">
+              <div id="u508_div" class=""></div>
+              <div id="u508_text" class="text ">
+                <p><span>患者管理</span></p>
+              </div>
+            </div>
+            <div id="u506_children" class="u506_children">
+
+              <!-- Unnamed (节点) -->
+              <div id="u509" class="ax_default tree_node treenode">
+                <!-- Unnamed (矩形) -->
+                <div id="u510" class="" selectiongroup="u476u503_tree_group">
+                  <div id="u510_div" class=""></div>
+                  <div id="u510_text" class="text ">
+                    <p><span>门诊患者管理</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Unnamed (节点) -->
+              <div id="u511" class="ax_default tree_node treenode">
+                <!-- Unnamed (矩形) -->
+                <div id="u512" class="" selectiongroup="u476u503_tree_group">
+                  <div id="u512_div" class=""></div>
+                  <div id="u512_text" class="text ">
+                    <p><span>互联网患者管理</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unnamed (节点) -->
+          <div id="u513" class="ax_default tree_node treenode">
+            <!-- Unnamed (矩形) -->
+            <div id="u514" class="" selectiongroup="u476u503_tree_group">
+              <div id="u514_div" class=""></div>
+              <div id="u514_text" class="text ">
+                <p><span>评估</span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unnamed (节点) -->
+          <div id="u515" class="ax_default tree_node treenode">
+            <!-- Unnamed (矩形) -->
+            <div id="u516" class="" selectiongroup="u476u503_tree_group">
+              <div id="u516_div" class=""></div>
+              <div id="u516_text" class="text ">
+                <p><span>护理</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Unnamed (形状) -->
+      <div id="u517" class="ax_default icon">
+        <img id="u517_img" class="img " src="images/首页/u88.svg"/>
+        <div id="u517_text" class="text " style="display:none; visibility: hidden">
+          <p></p>
+        </div>
+      </div>
+      <div id="u476" style="display:none; visibility:hidden;"></div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u518" class="ax_default label">
+        <div id="u518_div" class=""></div>
+        <div id="u518_text" class="text ">
+          <p><span>+</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u519" class="ax_default box_2">
+        <div id="u519_div" class=""></div>
+        <div id="u519_text" class="text ">
+          <p><span>打印评估需求</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (复选框) -->
+      <div id="u520" class="ax_default checkbox">
+        <label id="u520_input_label" for="u520_input" style="position: absolute; left: 0px;">
+          <img id="u520_img" class="img " src="images/需求评估/u520.svg"/>
+          <div id="u520_text" class="text ">
+            <p><span>住院</span></p>
+          </div>
+        </label>
+        <input id="u520_input" type="checkbox" value="checkbox"/>
+      </div>
+
+      <!-- Unnamed (复选框) -->
+      <div id="u521" class="ax_default checkbox">
+        <label id="u521_input_label" for="u521_input" style="position: absolute; left: 0px;">
+          <img id="u521_img" class="img " src="images/需求评估/u521.svg"/>
+          <div id="u521_text" class="text ">
+            <p><span>居家服务</span></p>
+          </div>
+        </label>
+        <input id="u521_input" type="checkbox" value="checkbox"/>
+      </div>
+
+      <!-- Unnamed (矩形) -->
+      <div id="u522" class="ax_default _文本段落">
+        <div id="u522_div" class=""></div>
+        <div id="u522_text" class="text ">
+          <p><span>读取数据</span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (复选框) -->
+      <div id="u523" class="ax_default checkbox">
+        <label id="u523_input_label" for="u523_input" style="position: absolute; left: 0px;">
+          <img id="u523_img" class="img " src="images/需求评估/u523.svg"/>
+          <div id="u523_text" class="text ">
+            <p><span>糖尿病</span></p>
+          </div>
+        </label>
+        <input id="u523_input" type="checkbox" value="checkbox"/>
+      </div>
+
+      <!-- Unnamed (复选框) -->
+      <div id="u524" class="ax_default checkbox">
+        <label id="u524_input_label" for="u524_input" style="position: absolute; left: 0px;">
+          <img id="u524_img" class="img " src="images/需求评估/u524.svg"/>
+          <div id="u524_text" class="text ">
+            <p><span>造口伤口</span></p>
+          </div>
+        </label>
+        <input id="u524_input" type="checkbox" value="checkbox"/>
+      </div>
+
+      <!-- Unnamed (复选框) -->
+      <div id="u525" class="ax_default checkbox">
+        <label id="u525_input_label" for="u525_input" style="position: absolute; left: 0px;">
+          <img id="u525_img" class="img " src="images/需求评估/u525.svg"/>
+          <div id="u525_text" class="text ">
+            <p><span>PICC护理</span></p>
+          </div>
+        </label>
+        <input id="u525_input" type="checkbox" value="checkbox"/>
+      </div>
+
+      <!-- Unnamed (复选框) -->
+      <div id="u526" class="ax_default checkbox">
+        <label id="u526_input_label" for="u526_input" style="position: absolute; left: 0px;">
+          <img id="u526_img" class="img " src="images/需求评估/u526.svg"/>
+          <div id="u526_text" class="text ">
+            <p><span>慢阻肺</span></p>
+          </div>
+        </label>
+        <input id="u526_input" type="checkbox" value="checkbox"/>
+      </div>
+
+      <!-- Unnamed (复选框) -->
+      <div id="u527" class="ax_default checkbox">
+        <label id="u527_input_label" for="u527_input" style="position: absolute; left: 0px;">
+          <img id="u527_img" class="img " src="images/需求评估/u527.svg"/>
+          <div id="u527_text" class="text ">
+            <p><span>安宁疗护</span></p>
+          </div>
+        </label>
+        <input id="u527_input" type="checkbox" value="checkbox"/>
+      </div>
+
+      <!-- Unnamed (复选框) -->
+      <div id="u528" class="ax_default checkbox">
+        <label id="u528_input_label" for="u528_input" style="position: absolute; left: 0px;">
+          <img id="u528_img" class="img " src="images/需求评估/u528.svg"/>
+          <div id="u528_text" class="text ">
+            <p><span>中医护理</span></p>
+          </div>
+        </label>
+        <input id="u528_input" type="checkbox" value="checkbox"/>
+      </div>
+
+      <!-- Unnamed (复选框) -->
+      <div id="u529" class="ax_default checkbox">
+        <label id="u529_input_label" for="u529_input" style="position: absolute; left: 0px;">
+          <img id="u529_img" class="img " src="images/需求评估/u529.svg"/>
+          <div id="u529_text" class="text ">
+            <p><span>康复护理</span></p>
+          </div>
+        </label>
+        <input id="u529_input" type="checkbox" value="checkbox"/>
+      </div>
+
+      <!-- Unnamed (复选框) -->
+      <div id="u530" class="ax_default checkbox">
+        <label id="u530_input_label" for="u530_input" style="position: absolute; left: 0px;">
+          <img id="u530_img" class="img " src="images/需求评估/u530.svg"/>
+          <div id="u530_text" class="text ">
+            <p><span>母婴护理</span></p>
+          </div>
+        </label>
+        <input id="u530_input" type="checkbox" value="checkbox"/>
+      </div>
+
+      <!-- Unnamed (复选框) -->
+      <div id="u531" class="ax_default checkbox">
+        <label id="u531_input_label" for="u531_input" style="position: absolute; left: 0px;">
+          <img id="u531_img" class="img " src="images/需求评估/u531.svg"/>
+          <div id="u531_text" class="text ">
+            <p><span>生活护理</span></p>
+          </div>
+        </label>
+        <input id="u531_input" type="checkbox" value="checkbox"/>
+      </div>
+
+      <!-- Unnamed (复选框) -->
+      <div id="u532" class="ax_default checkbox">
+        <label id="u532_input_label" for="u532_input" style="position: absolute; left: 0px;">
+          <img id="u532_img" class="img " src="images/需求评估/u532.svg"/>
+          <div id="u532_text" class="text ">
+            <p><span>通用护理</span></p>
+          </div>
+        </label>
+        <input id="u532_input" type="checkbox" value="checkbox"/>
+      </div>
+    </div>
+    <script src="resources/scripts/axure/ios.js"></script>
+  </body>
+</html>
